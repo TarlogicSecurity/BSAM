@@ -1,0 +1,32 @@
+title: BSAM
+description:
+  en: A security testing methodology for Bluetooth devices.
+  es: Una metodología para evaluar la seguridad de dispositivos Bluetooth.
+
+search_enabled: false 
+
+theme: just-the-docs
+favicon_ico: "/favicon.png"
+color_scheme: tarlogic
+callouts:
+  note:
+    title: Note
+    color: aqua
+heading_anchors: false
+
+sass:
+  sourcemap: never
+
+languages: ["en", "es"]
+default_lang: "en"
+parallel_localization: false
+exclude_from_localization: ['assets']
+
+plugins:
+  - jekyll-polyglot
+
+exclude:
+  - BSAM_branding
+  - jekyll-polyglot-1.7.0.gem
+  - README.md
+  - LICENSE

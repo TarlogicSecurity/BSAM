@@ -1,0 +1,17 @@
+{% if page.image == nil %}
+<meta property="og:image" content="{{site.baseurl}}/assets/img/BSAM.png" />
+{% endif %}
+{% if page.summary %}
+{% if page.title contains "BSAM-" %}<title>{{ page.summary }} - {{ page.title }}</title>{% else %}<title>{{ page.summary }}  - {{ site.title }}</title>{% endif %}
+{% else %}<title>{{ page.title }}  - {{ site.title }}</title>{% endif %}
+
+{% for lang in site.languages %}
+{% capture lang_href %}{{site.url}}{{site.baseurl}}/{% if lang != site.default_lang %}{{ lang }}/{% endif %}{% if page.permalink_lang[lang] != '/' %}{{page.permalink_lang[lang]}}{% endif %}{% endcapture %}
+<link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{ lang_href }}"{% endstatic_href %} />
+{%- if lang == site.default_lang -%}
+<link rel="alternate" hreflang="x-default" {% static_href %}href="{{ lang_href }}"{% endstatic_href %} />
+{%- endif -%}
+{%- if lang == site.active_lang -%}
+<link rel="canonical" {% static_href %}href="{{ lang_href }}"{% endstatic_href %} />
+{%- endif -%}
+{% endfor %}

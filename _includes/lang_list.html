@@ -1,0 +1,5 @@
+{% comment %}
+{% for lang in site.languages %}
+<a {% if lang == site.active_lang %}style="font-weight: bold;"{% endif %} {% static_href %}href="{{site.baseurl}}{% if lang != site.default_lang %}/{{ lang }}{% endif %}{{page.url}}"{% endstatic_href %} >{{ lang }}</a>{%- if forloop.last == false -%}{{", "}}{%- endif -%}
+{% endfor %}
+{% endcomment %}

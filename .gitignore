@@ -1,0 +1,11 @@
+# Ruby & Bundle
+Gemfile.lock
+.bundle/
+
+# Jekyll
+_site/
+.jekyll-cache
+
+# DrawIO
+*.drawio.bkp
+*.drawio.dtmp

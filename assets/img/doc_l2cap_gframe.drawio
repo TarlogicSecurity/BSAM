@@ -1,0 +1,22 @@
+<mxfile host="Electron" modified="2023-09-13T09:24:43.883Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="OhB5AjAto1_a1eIEVOaf" version="21.6.8" type="device">
+  <diagram name="Página-1" id="N1r0uMiinhnDOxKA0FRR">
+    <mxGraphModel dx="920" dy="617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-6vDyyXew504VjnUr2za-1" value="Length&lt;br&gt;(2 bytes)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="120" y="180" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-6vDyyXew504VjnUr2za-2" value="Channel ID&lt;br&gt;(2 bytes)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="190" y="180" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-6vDyyXew504VjnUr2za-3" value="Payload&lt;br&gt;($length bytes)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="330" y="180" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZDduyyjQUevrRuRNzDjq-1" value="PSM&lt;br&gt;(≥2 bytes)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="180" width="70" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
