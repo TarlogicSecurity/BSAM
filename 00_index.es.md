@@ -46,7 +46,7 @@ Los controles de esta metodología se centran en las comprobaciones que han de r
 
 ## Estado de la guia de seguridad Bluetooth
 
-El proyecto BSAM tiene como objetivo crear una completa **guia de seguridad Bluetooth** y por eso está en contínuo desarrollo. ¡Esta metodología Bluetooth no se considera terminada y puede recibir modificaciones que afecten a su contenido o estructura!
+El proyecto BSAM tiene como objetivo crear una completa **guia de seguridad Bluetooth** y por eso está en continuo desarrollo. ¡Esta metodología Bluetooth no se considera terminada y puede recibir modificaciones que afecten a su contenido o estructura!
 
 A continuación, se listan algunas de las tareas en progreso:
 * Expandir la sección de documentación
