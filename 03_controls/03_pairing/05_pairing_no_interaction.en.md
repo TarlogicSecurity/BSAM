@@ -77,4 +77,4 @@ Full capture: [Galaxy Buds Pairing]({{ 'assets/captures/GalaxyBudsPairing.pcapng
 * Bluetooth Core V5.3, Vol. 3, Part H, Section 2.3.1 Pairing Methods
 * Bluetooth Core V5.3, Vol. 3, Part H, Section 2.3.5.2 LE Legacy pairing - Just Works
 * Bluetooth Core V5.3, Vol. 3, Part H, Section 2.3.5.4 Out Of Band
-* Bluetooth Core V5.3, Vol. 3, Part H, Section 2.3.5.6.2 Aunthenticacion Stage 1 - Just Works or Numeric Comparison
+* Bluetooth Core V5.3, Vol. 3, Part H, Section 2.3.5.6.2 Authentication Stage 1 - Just Works or Numeric Comparison
