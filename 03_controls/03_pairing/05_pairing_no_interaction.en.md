@@ -43,25 +43,27 @@ To check this control, the following resources may be useful:
 
 ## Example case
 
-We will use Wireshark with [BTVS](https://learn.microsoft.com/en-us/windows-hardware/drivers/bluetooth/testing-btp-tools-btvs) (btvs.exe -Mode wireshark) to capture and analyze the packets.
+In this example, a pairing test with wireless headphones is demonstrated.
 
-The Bluetooth device configuration tool of the laptop's operating system is used to initiate the connection. In Bluetooth Classic, the connection between the two devices starts with the _IO Capability Request_ command.
+For the test, Wireshark has been used with [BTVS](https://learn.microsoft.com/en-us/windows-hardware/drivers/bluetooth/testing-btp-tools-btvs) (btvs.exe -Mode wireshark) to capture and analyze packets. To perform the connection and pairing, the Bluetooth device configuration tool of the laptop's operating system is used.
 
-![Wireshark IO Caps Request]({{ '/assets/img/bsam-pa-01_io_cap_request.png' | relative_url}})
+The headphones use Bluetooth Classic, where most of the pairing process occurs in the controller and is not visible from the host. However, in this case, it is sufficient to observe the exchange of HCI messages, where the _IO Capability_ values ​​appear.
 
-The headphones respond with the _IO Capability Request Reply_ command with _IO Capability_ 0x03 (NoInputNoOutput). This allows pairings without user intervention.
+The first HCI messages of the pairing process between the two devices are the _IO Capability Request_ event, where the controller requests the local host's _IO Capabilities_, and the _IO Capability Request Reply_ command, where the host responds.
 
-![Wireshark IO Caps Request Reply]({{ '/assets/img/bsam-pa-01_io_cap_request_reply.png' | relative_url}})
+Later, the _IO Capability Response_ message is observed, where the headphones' _IO Capabilities_ appear. In this case, it is observed that the value is 0x03 (NoInputNoOutput).
 
-Pairing is confirmed a few messages later with the _Simple Pairing Complete_ command.
+![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-02_io_caps_response.png' | relative_url}})
+
+This value does not allow pairing to be done with user interaction. In the capture, it is observed that the pairing is indeed completed successfully. Pairing is confirmed through the Simple Pairing Complete command.
 
 ![Wireshark Simple Pairing]({{ '/assets/img/bsam-pa-05_pairing_no_user_interaction.png' | relative_url}})
 
 The input/output capabilities of the headphones have allowed pairing without user confirmation or notification.
 
-The check control _FAIL_ when a device is pairable without user intervention.
+The control result will be _FAIL_ when a device is pairable without user intervention.
 
-The _Just Works_ pairing method should be avoided. In this case, the device had buttons on both headphones that can be utilized as Yes/No buttons, thus providing a means for pairing confirmation.
+The _Just Works_ pairing mechanism should be avoided. In this case, the device had buttons on both headphones and can be used as Yes/No buttons, thus confirming the pairing.
 
 ## External references
 
