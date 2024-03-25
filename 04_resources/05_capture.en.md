@@ -51,7 +51,23 @@ References:
 
 ## Capture Bluetooth connection on Android
 
-Android natively supports the export of communication logs using a mechanism known as `btsnoop`. There are Frida scripts such as `Frida BLEMon` that allow you to implement Bluetooth API calls to generate Bluetooth communication dumps.
+Android natively supports the export of communication logs using a mechanism known as `btsnoop` or `Bluetooth HCI snoop log`. There are Frida scripts such as `Frida BLEMon` that allow you to implement Bluetooth API calls to generate Bluetooth communication dumps.
+
+The extraction of the `btsnoop` logs is different depending on the Android device and its manufacturer, although some of the steps might be common.
+
+### Developer Options
+
+On most Android devices, the `Bluetooth HCI snoop log` is a developer feature, so the developer options must be activated first.
+
+Go to `Settings > About phone` and tap repeatedly on the `Build number` until a bubble indicates that the developer options have been activated. 
+
+### Extracting btsnoop logs on OnePlus 6T
+
+With the developer options activated, go to `Settings > System > Developer Options` and tap on `Enable Bluetooth HCI snoop log` to enable it. Then, stop and start the Bluetooth functionality. Now the HCI messages are being stored in a log, as long as the `Bluetooth HCI snoop log` remains enabled.
+
+To extract the log from the phone, go to `Settings > System > Developer Options > Get logs` and start the capture of `Bluetooth Exception`, tapping on `NOT REBOOT` to avoid rebooting. This is only to exctract the previously generated log file, it's not necesary to repeat the tests while capturing with `Bluetooth Exception`.
+
+After a few seconds, stop the `Bluetooth Exception` capture and wait until the report is generated. When it's finished, tap on `SHARE` and select the `btsnoop` folder. Then tap on the menu `(...)` and on `Share`. This allows to send the `btsnoop` folder, containing every `HCI snoop log` generated, to some other place where they can be analysed. 
 
 References:
 

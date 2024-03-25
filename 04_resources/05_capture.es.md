@@ -51,7 +51,23 @@ Referencias:
 
 ## Captura Bluetooth en Android
 
-Android soporta de manera nativa la exportación de logs de comunicaciones mediante un mecanismo conocido como `btsnoop`. Existen scripts de Frida como `Frida BLEMon` que permiten instrumentar llamadas del API de Bluetooth para generar volcados de comunicaciones Bluetooth.
+Android soporta de manera nativa la exportación de logs de comunicaciones mediante un mecanismo conocido como `btsnoop` o `registro de Bluetooth HCI`. Existen scripts de Frida como `Frida BLEMon` que permiten instrumentar llamadas del API de Bluetooth para generar volcados de comunicaciones Bluetooth.
+
+La obtención de los registros `btsnoop` difiere para cada dispositivo android y para cada fabricante, aunque algunos pasos pueden ser comunes.
+
+### Opciones para desarrolladores
+
+En la mayoría de dispositivos Android, el `registro de Bluetooth HCI` es una funcionalidad para desarrolladores, por lo que hay que activar las opciones para desarrolladores para poder utilizarlo.
+
+Para ello, se accede a `Ajustes > Información del teléfono` y se pulsa sobre `Número de compilación` repetidamente hasta que aparezca una notificación indicando que las opciones para desarrolladores están activadas.
+
+### Obtención de registros btsnoop en OnePlus 6T
+
+Con las opciones para desarrolladores activadas, se accede a `Ajustes > Sistema > Opciones para desarrolladores` y se pulsa sobre `Habilitar registro de Bluetooth HCI` para habilitar el registro. Luego, pausa y vuelve a iniciar la función Bluetooth del teléfono. A partir de ahora, todos los mensajes HCI se registran en archivos de log mientras la opción `Hadilitar registro de Bluetooth HCI` permanezca habilitada.
+
+Para extraer los archivos de log del teléfono, se accede a `Ajustes > Sistema > Opciones para desarrolladores > Obtener registros` y se inicia la captura `Bluetooth Exception`, pulsando sobre `NOT REBOOT` para evitar reiniciar el terminal. Este paso sólo sirve para extraer los logs previamente generados, no es necesario repetir las pruebas con la captura de `Bluetooth Exception` activa.
+
+Después de unos seguindos, se detiene la captura de `Bluetooth Exception` y se espera a que el informe sea generado. Cuando haya terminado, se pulsa sobre `SHARE` y se selecciona la carpeta `btsnoop`. Luego, se pulsa sobre el menú `(...)` y sobre `Share` para enviar la carpeta `btsnoop`, que contiene todos los `registros de Bluetooth HCI`, a alguna otra ubicación donde analizarlos.
 
 Referencias:
 
