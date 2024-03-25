@@ -61,7 +61,7 @@ On most Android devices, the `Bluetooth HCI snoop log` is a developer feature, s
 
 Go to `Settings > About phone` and tap repeatedly on the `Build number` until a bubble indicates that the developer options have been activated. 
 
-### Extracting btsnoop logs on OnePlus 6T
+### Extracting btsnoop logs on OxygenOS 11.1.2.2
 
 With the developer options activated, go to `Settings > System > Developer Options` and tap on `Enable Bluetooth HCI snoop log` to enable it. Then, stop and start the Bluetooth functionality. Now the HCI messages are being stored in a log, as long as the `Bluetooth HCI snoop log` remains enabled.
 

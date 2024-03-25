@@ -61,7 +61,7 @@ En la mayoría de dispositivos Android, el `registro de Bluetooth HCI` es una fu
 
 Para ello, se accede a `Ajustes > Información del teléfono` y se pulsa sobre `Número de compilación` repetidamente hasta que aparezca una notificación indicando que las opciones para desarrolladores están activadas.
 
-### Obtención de registros btsnoop en OnePlus 6T
+### Obtención de registros btsnoop en OxygenOS 11.1.2.2
 
 Con las opciones para desarrolladores activadas, se accede a `Ajustes > Sistema > Opciones para desarrolladores` y se pulsa sobre `Habilitar registro de Bluetooth HCI` para habilitar el registro. Luego, pausa y vuelve a iniciar la función Bluetooth del teléfono. A partir de ahora, todos los mensajes HCI se registran en archivos de log mientras la opción `Hadilitar registro de Bluetooth HCI` permanezca habilitada.
 
