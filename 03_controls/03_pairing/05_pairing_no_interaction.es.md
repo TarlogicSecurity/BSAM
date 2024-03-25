@@ -53,7 +53,7 @@ Los primeros mensajes HCI del proceso de emparejamiento entre los dos dispositiv
 
 Más tarde se observa el mensaje _IO Capability Response_ donde aparecen las _IO Capabilities_ de los auriculares. En este caso, se observa que el valor es 0x03 (_NoInputNoOutput_).
 
-![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-02_io_caps_response.png' | relative_url}})
+![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-05_io_caps_response.png' | relative_url}})
 
 Este valor no permite que el emparejamiento se realice con interacción del usuario. En la captura se observa que, efectivamente, el emparejamiento se completa con éxito. El emparejamiento se confirma mediante el comando _Simple Pairing Complete_.
 
@@ -64,6 +64,8 @@ Las capacidades de entrada / salida de los auriculares han permitido el empareja
 El resultado del control será _FAIL_ cuando un dispositivo es emparejable sin intervención del usuario.
 
 El mecanismo de emparejamiento _Just Works_ debe evitarse. En este caso, el dispositivo contaba con botones en ambos auriculares y pueden aprovecharse como botón Yes/No, realizando así una confirmación de emparejamiento.
+
+Captura completa: [Galaxy Buds Pairing]({{ 'assets/captures/GalaxyBudsPairing.pcapng' | relative_url}})
 
 ## Referencias externas 
 

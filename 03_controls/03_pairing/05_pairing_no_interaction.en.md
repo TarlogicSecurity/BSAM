@@ -53,7 +53,7 @@ The first HCI messages of the pairing process between the two devices are the _I
 
 Later, the _IO Capability Response_ message is observed, where the headphones' _IO Capabilities_ appear. In this case, it is observed that the value is 0x03 (NoInputNoOutput).
 
-![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-02_io_caps_response.png' | relative_url}})
+![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-05_io_caps_response.png' | relative_url}})
 
 This value does not allow pairing to be done with user interaction. In the capture, it is observed that the pairing is indeed completed successfully. Pairing is confirmed through the Simple Pairing Complete command.
 
@@ -64,6 +64,8 @@ The input/output capabilities of the headphones have allowed pairing without use
 The control result will be _FAIL_ when a device is pairable without user intervention.
 
 The _Just Works_ pairing mechanism should be avoided. In this case, the device had buttons on both headphones and can be used as Yes/No buttons, thus confirming the pairing.
+
+Full capture: [Galaxy Buds Pairing]({{ 'assets/captures/GalaxyBudsPairing.pcapng' | relative_url}})
 
 ## External references
 
