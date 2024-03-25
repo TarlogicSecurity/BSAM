@@ -43,17 +43,19 @@ Para comprobar este control, pueden ser útiles los siguientes recursos:
 
 ## Caso de ejemplo
 
-Utilizaremos Wireshark con [BTVS](https://learn.microsoft.com/es-es/windows-hardware/drivers/bluetooth/testing-btp-tools-btvs) (btvs.exe -Mode wireshark) para capturar los paquetes y analizarlos.
+En este ejemplo, se muestra una prueba de emparejamiento con unos auriculares inalámbricos.
 
-Se utiliza la herramienta de configuración de dispositivos Bluetooth del sistema operativo del portátil para iniciar la conexión. En Bluetooth Classic, la conexión entre los dos dispositivos comienza con el comando _IO Capability Request_.
+Para la prueba, se ha utilizado Wireshark con BTVS (más información en la [sección de recursos](https://www.tarlogic.com/bsam/resources/capture-bluetooth-connection/)) para capturar los paquetes y analizarlos. Para realizar la conexión y el emparejamiento, se utiliza la herramienta de configuración de dispositivos Bluetooth del sistema operativo del portátil.
 
-![Wireshark IO Caps Request]({{ '/assets/img/bsam-pa-01_io_cap_request.png' | relative_url}})
+Los auriculares utilizan Bluetooth Classic, donde la mayor parte del proceso de emparejamiento ocurre en el controlador y no es visible desde el _host_. Sin embargo, en este caso, es suficiente observar el intercambio de mensajes HCI, donde aparecen los valores de _IO Capability_.
 
-Los auriculares responden mediante el comando _IO Capability Request Reply_ con unas _IO Capability_ `0x03` (`NoInputNoOutput`). Esto permite emparejamientos sin intervención del usuario.
+Los primeros mensajes HCI del proceso de emparejamiento entre los dos dispositivos son el evento _IO Capability Request_, con el que el controlador solicita al _host_ local las _IO Capabilities_, y el comando _IO Capability Request Reply_, con el que el _host_ responde. Estos mensajes no son relevantes para el ejemplo.
 
-![Wireshark IO Caps Request Reply]({{ '/assets/img/bsam-pa-01_io_cap_request_reply.png' | relative_url}})
+Más tarde se observa el mensaje _IO Capability Response_ donde aparecen las _IO Capabilities_ de los auriculares. En este caso, se observa que el valor es 0x03 (_NoInputNoOutput_).
 
-Se confirma unos mensajes después el emparejamiento mediante el comando _Simple Pairing Complete_.
+![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-05_io_cap_response.png' | relative_url}})
+
+Este valor no permite que el emparejamiento se realice con interacción del usuario. En la captura se observa que, efectivamente, el emparejamiento se completa con éxito. El emparejamiento se confirma mediante el comando _Simple Pairing Complete_.
 
 ![Wireshark Simple Pairing]({{ '/assets/img/bsam-pa-05_pairing_no_user_interaction.png' | relative_url}})
 
@@ -62,6 +64,8 @@ Las capacidades de entrada / salida de los auriculares han permitido el empareja
 El resultado del control será _FAIL_ cuando un dispositivo es emparejable sin intervención del usuario.
 
 El mecanismo de emparejamiento _Just Works_ debe evitarse. En este caso, el dispositivo contaba con botones en ambos auriculares y pueden aprovecharse como botón Yes/No, realizando así una confirmación de emparejamiento.
+
+Captura completa: [Galaxy Buds Pairing]({{ 'assets/captures/GalaxyBudsPairing.pcapng' | relative_url}})
 
 ## Referencias externas 
 
