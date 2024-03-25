@@ -45,7 +45,7 @@ Para comprobar este control, pueden ser útiles los siguientes recursos:
 
 En este ejemplo, se muestra una prueba de emparejamiento con unos auriculares inalámbricos.
 
-Para la prueba, se ha utilizado Wireshark con [BTVS](https://learn.microsoft.com/es-es/windows-hardware/drivers/bluetooth/testing-btp-tools-btvs) (btvs.exe -Mode wireshark) para capturar los paquetes y analizarlos. Para realizar la conexión y el emparejamiento, se utiliza la herramienta de configuración de dispositivos Bluetooth del sistema operativo del portátil.
+Para la prueba, se ha utilizado Wireshark con BTVS (más información en la [sección de recursos](https://www.tarlogic.com/bsam/resources/capture-bluetooth-connection/)) para capturar los paquetes y analizarlos. Para realizar la conexión y el emparejamiento, se utiliza la herramienta de configuración de dispositivos Bluetooth del sistema operativo del portátil.
 
 Los auriculares utilizan Bluetooth Classic, donde la mayor parte del proceso de emparejamiento ocurre en el controlador y no es visible desde el _host_. Sin embargo, en este caso, es suficiente observar el intercambio de mensajes HCI, donde aparecen los valores de _IO Capability_.
 
