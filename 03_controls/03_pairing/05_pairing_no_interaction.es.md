@@ -53,7 +53,7 @@ Los primeros mensajes HCI del proceso de emparejamiento entre los dos dispositiv
 
 Más tarde se observa el mensaje _IO Capability Response_ donde aparecen las _IO Capabilities_ de los auriculares. En este caso, se observa que el valor es 0x03 (_NoInputNoOutput_).
 
-![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-05_io_caps_response.png' | relative_url}})
+![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-05_io_cap_response.png' | relative_url}})
 
 Este valor no permite que el emparejamiento se realice con interacción del usuario. En la captura se observa que, efectivamente, el emparejamiento se completa con éxito. El emparejamiento se confirma mediante el comando _Simple Pairing Complete_.
 

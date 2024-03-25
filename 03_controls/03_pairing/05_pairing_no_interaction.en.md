@@ -53,7 +53,7 @@ The first HCI messages of the pairing process between the two devices are the _I
 
 Later, the _IO Capability Response_ message is observed, where the headphones' _IO Capabilities_ appear. In this case, it is observed that the value is 0x03 (NoInputNoOutput).
 
-![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-05_io_caps_response.png' | relative_url}})
+![Wireshark Pairing IO Capabilities]({{ 'assets/img/bsam-pa-05_io_cap_response.png' | relative_url}})
 
 This value does not allow pairing to be done with user interaction. In the capture, it is observed that the pairing is indeed completed successfully. Pairing is confirmed through the Simple Pairing Complete command.
 
