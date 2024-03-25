@@ -27,6 +27,5 @@ plugins:
 
 exclude:
   - BSAM_branding
-  - jekyll-polyglot-1.7.0.gem
   - README.md
   - LICENSE
