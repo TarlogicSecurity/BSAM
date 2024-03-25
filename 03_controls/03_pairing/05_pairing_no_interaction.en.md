@@ -45,11 +45,11 @@ To check this control, the following resources may be useful:
 
 In this example, a pairing test with wireless headphones is demonstrated.
 
-For the test, Wireshark has been used with [BTVS](https://learn.microsoft.com/en-us/windows-hardware/drivers/bluetooth/testing-btp-tools-btvs) (btvs.exe -Mode wireshark) to capture and analyze packets. To perform the connection and pairing, the Bluetooth device configuration tool of the laptop's operating system is used.
+For the test, Wireshark has been used with BTVS (check out the [resources section](https://www.tarlogic.com/bsam/resources/capture-bluetooth-connection/)) to capture and analyze packets. To perform the connection and pairing, the Bluetooth device configuration tool of the laptop's operating system is used.
 
 The headphones use Bluetooth Classic, where most of the pairing process occurs in the controller and is not visible from the host. However, in this case, it is sufficient to observe the exchange of HCI messages, where the _IO Capability_ values ​​appear.
 
-The first HCI messages of the pairing process between the two devices are the _IO Capability Request_ event, where the controller requests the local host's _IO Capabilities_, and the _IO Capability Request Reply_ command, where the host responds.
+The first HCI messages of the pairing process between the two devices are the _IO Capability Request_ event, where the controller requests the local host's _IO Capabilities_, and the _IO Capability Request Reply_ command, where the host responds. These messages are not relevant for the current example.
 
 Later, the _IO Capability Response_ message is observed, where the headphones' _IO Capabilities_ appear. In this case, it is observed that the value is 0x03 (NoInputNoOutput).
 

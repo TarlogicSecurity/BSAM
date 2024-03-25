@@ -49,7 +49,7 @@ Para la prueba, se ha utilizado Wireshark con BTVS (más información en la [sec
 
 Los auriculares utilizan Bluetooth Classic, donde la mayor parte del proceso de emparejamiento ocurre en el controlador y no es visible desde el _host_. Sin embargo, en este caso, es suficiente observar el intercambio de mensajes HCI, donde aparecen los valores de _IO Capability_.
 
-Los primeros mensajes HCI del proceso de emparejamiento entre los dos dispositivos son el evento _IO Capability Request_, con el que el controlador solicita al _host_ local las _IO Capabilities_, y el comando _IO Capability Request Reply_, con el que el _host_ responde.
+Los primeros mensajes HCI del proceso de emparejamiento entre los dos dispositivos son el evento _IO Capability Request_, con el que el controlador solicita al _host_ local las _IO Capabilities_, y el comando _IO Capability Request Reply_, con el que el _host_ responde. Estos mensajes no son relevantes para el ejemplo.
 
 Más tarde se observa el mensaje _IO Capability Response_ donde aparecen las _IO Capabilities_ de los auriculares. En este caso, se observa que el valor es 0x03 (_NoInputNoOutput_).
 
