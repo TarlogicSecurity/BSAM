@@ -67,7 +67,7 @@ Con las opciones para desarrolladores activadas, se accede a `Ajustes > Sistema 
 
 Para extraer los archivos de log del teléfono, se accede a `Ajustes > Sistema > Opciones para desarrolladores > Obtener registros` y se inicia la captura `Bluetooth Exception`, pulsando sobre `NOT REBOOT` para evitar reiniciar el terminal. Este paso sólo sirve para extraer los logs previamente generados, no es necesario repetir las pruebas con la captura de `Bluetooth Exception` activa.
 
-Después de unos seguundos, se detiene la captura de `Bluetooth Exception` y se espera a que el informe sea generado. Cuando haya terminado, se pulsa sobre `SHARE` y se selecciona la carpeta `btsnoop`. Luego, se pulsa sobre el menú `(...)` y sobre `Share` para enviar la carpeta `btsnoop`, que contiene todos los `registros de Bluetooth HCI`, a alguna otra ubicación donde analizarlos.
+Después de unos segundos, se detiene la captura de `Bluetooth Exception` y se espera a que el informe sea generado. Cuando haya terminado, se pulsa sobre `SHARE` y se selecciona la carpeta `btsnoop`. Luego, se pulsa sobre el menú `(...)` y sobre `Share` para enviar la carpeta `btsnoop`, que contiene todos los `registros de Bluetooth HCI`, a alguna otra ubicación donde analizarlos.
 
 Referencias:
 
