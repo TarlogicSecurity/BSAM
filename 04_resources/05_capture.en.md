@@ -65,9 +65,9 @@ Go to `Settings > About phone` and tap repeatedly on the `Build number` until a 
 
 With the developer options activated, go to `Settings > System > Developer Options` and tap on `Enable Bluetooth HCI snoop log` to enable it. Then, stop and start the Bluetooth functionality. Now the HCI messages are being stored in a log, as long as the `Bluetooth HCI snoop log` remains enabled.
 
-To extract the log from the phone, go to `Settings > System > Developer Options > Get logs` and start the capture of `Bluetooth Exception`, tapping on `NOT REBOOT` to avoid rebooting. This is only to exctract the previously generated log file, it's not necesary to repeat the tests while capturing with `Bluetooth Exception`.
+To extract the log from the phone, go to `Settings > System > Developer Options > Get logs` and start the capture of `Bluetooth Exception`, tapping on `NOT REBOOT` to avoid rebooting. This is only to extract the previously generated log file, it's not necessary to repeat the tests while capturing with `Bluetooth Exception`.
 
-After a few seconds, stop the `Bluetooth Exception` capture and wait until the report is generated. When it's finished, tap on `SHARE` and select the `btsnoop` folder. Then tap on the menu `(...)` and on `Share`. This allows to send the `btsnoop` folder, containing every `HCI snoop log` generated, to some other place where they can be analysed. 
+After a few seconds, stop the `Bluetooth Exception` capture and wait until the report is generated. When it's finished, tap on `SHARE` and select the `btsnoop` folder. Then tap on the menu `(...)` and on `Share`. This allows to send the `btsnoop` folder, containing every `HCI snoop log` generated, to some other place where they can be analyzed. 
 
 References:
 
