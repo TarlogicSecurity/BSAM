@@ -28,7 +28,10 @@ Besides the core protocol specification, the _SIG_ also publishes other document
 
 The [GATT Specification Supplement](https://www.bluetooth.com/specifications/specs/?types=specs-docs&keyword=GATT+Specification+Supplement&filter=) is also of special interest, as it contains all the definitions of the _GATT characteristics_ and other descriptors of Bluetooth services.
 
-
+Additional learning materials provided by the *SIG* include:
+- [An Introduction to Bluetooth Low Energy Development](https://www.bluetooth.com/bluetooth-resources/bluetooth-le-developer-starter-kit/) is a self-study educational resource that covers theory and practice for Bluetooth Low Energy GAP and GATT application development.
+- [Designing and Developing Bluetooth Internet Gateway](https://www.bluetooth.com/bluetooth-resources/bluetooth-internet-gateways/?utm_campaign=developer&utm_source=internal&utm_medium=blog&utm_content=the-bluetooth-internet-gateway-study-guide) is also self-study educational material intended for software developers and technical architects, which focuses on Bluetooth internet gateways; middleware for interfacing BLE devices with the internet.  Note: Intended as a key component of any Internet of Things (IoT) architecture implementing Bluetooth technology.
+- [Bluetooth Technology for Linux Developers](https://www.bluetooth.com/bluetooth-resources/bluetooth-for-linux/) is another self-study resource for Linux developers which explains the architecture of Bluetooth applications implementing use of the D-Bus and BlueZ protocol stack.
 ## External references
 
 * <https://www.bluetooth.com/specifications/specs/>
