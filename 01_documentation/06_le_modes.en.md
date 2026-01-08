@@ -57,7 +57,7 @@ The procedures are not exclusive to any specific mode but are necessary to acces
 * _Data Signing_
 
     - Data signing is used to transfer authenticated data between two devices in an unencrypted communication.
-    - When _LE Security Mode 2_is requested, the connection data must be signed.
+    - When _LE Security Mode 2_ is requested, the connection data must be signed.
 
 * _Authorization procedure_
 
