@@ -39,7 +39,7 @@ In addition to common search engines and the manufacturer's page, searches are r
 | Avnet     | <https://www.avnet.com/>                                                  |
 | Microchip | <https://www.microchip.com/product-change-notifications/>                 |
 | Infineon  | <https://www.infineon.com/cms/en/product/search/discontinued-products/>   |
-
+| Broadcom  | <https://www.broadcom.com/products/wireless/wireless-lan-bluetooth>       |
 
 ## Related resources
 
