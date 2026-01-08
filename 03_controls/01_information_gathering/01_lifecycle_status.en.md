@@ -40,6 +40,7 @@ In addition to common search engines and the manufacturer's page, searches are r
 | Microchip | <https://www.microchip.com/product-change-notifications/>                 |
 | Infineon  | <https://www.infineon.com/cms/en/product/search/discontinued-products/>   |
 | Broadcom  | <https://www.broadcom.com/products/wireless/wireless-lan-bluetooth>       |
+| Qualcomm  | <https://www.qualcomm.com/wireless-connectivity?function=all>             |
 | uBlox     | <https://www.u-blox.com/en/short-range-radio-modules>                     |
 
 ## Related resources
