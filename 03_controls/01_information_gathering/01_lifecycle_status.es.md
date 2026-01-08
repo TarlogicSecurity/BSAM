@@ -38,7 +38,9 @@ Además de los motores de búsqueda comunes y la página del fabricante, se reco
 | Avnet     | <https://www.avnet.com/>                                                  |
 | Microchip | <https://www.microchip.com/product-change-notifications/>                 |
 | Infineon  | <https://www.infineon.com/cms/en/product/search/discontinued-products/>   |
-
+| Broadcom  | <https://www.broadcom.com/products/wireless/wireless-lan-bluetooth>       |
+| Qualcomm  | <https://www.qualcomm.com/wireless-connectivity?function=all>             |
+| uBlox     | <https://www.u-blox.com/en/short-range-radio-modules>                     |
 
 ## Recursos relacionados
 
