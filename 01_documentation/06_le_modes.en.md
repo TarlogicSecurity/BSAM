@@ -22,14 +22,14 @@ In Bluetooth LE, there are five connection modes that are subdivided into levels
 * _LE Security Mode 1_:
 
     - _Level 1_: No Security (no security or encryption)
-    - _Level 1_: Unauthenticated pairing with encryption
-    - _Level 1_: Authenticated pairing with encryption
-    - _Level 1_: Authenticated pairing with LE Secure Connection pairing using a secure 128-bit key
+    - _Level 2_: Unauthenticated pairing with encryption
+    - _Level 3_: Authenticated pairing with encryption
+    - _Level 4_: Authenticated pairing with LE Secure Connection pairing using a secure 128-bit key
 
 * _LE Security Mode 2_:
 
     - _Level 1_: Unauthenticated pairing with data signing
-    - _Level 1_: Authenticated pairing with data signing
+    - _Level 2_: Authenticated pairing with data signing
 
 * _Mixed security Mode_:
 
