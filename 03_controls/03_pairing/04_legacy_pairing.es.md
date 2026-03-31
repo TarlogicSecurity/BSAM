@@ -14,11 +14,11 @@ tags:
 - BLE
 ---
 
-Bluetooth permite distintos métodos de emparejamiento. Uno de ellos es el legacy pairing, diseñado para dispositivos con capacidades computacionales limitadas. Debido a esas limitaciones, el emparejamiento heredado emplea algoritmos de generación de claves obsoletos e inseguros.
+Bluetooth permite distintos métodos de emparejamiento. Uno de ellos es el legacy pairing, diseñado para dispositivos con capacidades computacionales limitadas. Debido a esas limitaciones, el legacy pairing emplea algoritmos de generación de claves obsoletos e inseguros.
 
 Durante la fase inicial del procedimiento de emparejamiento, los dispositivos intercambian sus capacidades mediante el proceso Pairing Feature Exchange. Este intercambio determina la derivación de la clave a largo plazo (LTK), que se utilizará posteriormente para establecer nuevas conexiones.
 
-Siempre que las capacidades del dispositivo lo permitan, el emparejamiento debe usar exclusivamente el modo Secure Connections Only, ya que el emparejamiento heredado se considera inseguro y no debe utilizarse en ningún caso. Secure Connections proporciona seguridad criptográfica moderna que evita ataques conocidos contra métodos antiguos.
+Siempre que las capacidades del dispositivo lo permitan, el emparejamiento debe usar exclusivamente el modo Secure Connections Only, ya que el legacy pairing se considera inseguro y no debe utilizarse en ningún caso. Secure Connections proporciona seguridad criptográfica moderna que evita ataques conocidos contra métodos antiguos.
 
 ## Descripción del proceso
 
