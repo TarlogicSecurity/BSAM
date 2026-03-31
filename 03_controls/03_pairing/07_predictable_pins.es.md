@@ -14,10 +14,9 @@ tags:
 - BLE
 ---
 
-Uno de los métodos utilizados durante el emparejamiento para generar la clave compartida entre los dispositivos consiste en compartir un código PIN generado aleatoriamente por uno de los dispositivos. A partir de este número PIN, que el usuario debe introducir, se genera la clave de enlace, por lo que es fundamental evitar que el número generado sea predecible.
+Otro método de emparejamiento utiliza un PIN aleatorio generado por el dispositivo, que el usuario introduce en el segundo dispositivo. Como la clave depende de este PIN, su imprevisibilidad es fundamental.
 
-Es crucial que la fuente utilizada para generar códigos PIN en un dispositivo sea impredecible. Para lograrlo, debemos evitar el uso de generadores rudimentarios de pseudoaleatoriedad, como la suma incremental o fragmentos de la "marca de tiempo" del "epoch" y otros métodos similares. En su lugar, se recomienda optar por generadores _RNG_ (Generadores de Números Aleatorios) integrados en los microcontroladores. Aunque estos generadores no se consideren _True RNG_ (Generadores de Números Verdaderamente Aleatorios), tienen una entropía lo suficientemente alta como para evitar ser una vulnerabilidad por sí mismos. Esto ayudará a evitar que terceros puedan predecir el PIN de acceso y, en consecuencia, derivar las claves de acceso a la conexión.
-
+La fuente usada para generar PIN debe proporcionar suficiente entropía. Deben evitarse generadores pseudo aleatorios rudimentarios como contadores incrementales o fragmentos de timestamps. En su lugar, deben emplearse generadores criptográficamente seguros para garantizar que los atacantes no puedan predecir el PIN.
 
 ## Descripción del proceso
 

@@ -14,12 +14,9 @@ tags:
 - BLE
 ---
 
-In a replay attack (or relay attack) an attacker intercepts and retransmits a valid message. This attack exploits the possibility that a legitimate message can be intercepted and forwarded by an attacker without being detected because there is no mechanism to validate and prevent sending the same message multiple times.
+In a replay (or relay) attack, an attacker intercepts and retransmits a valid message. This is possible when no mechanism exists to detect repeated transmissions or to ensure message freshness.
 
-If an application requires custom security methods and decides to use cryptography for a particular service, application layer security methods must be adecuate to prevent replay attacks.
-
-Not complying with this control may mean that, despite of the efforts of using application level security measures, theese can be bypassed.
-
+If an application implements custom security mechanisms and uses cryptography at the application layer for a specific service, these measures must adequately protect against replay attacks. Otherwise, even application level security can be bypassed.
 
 ## Description
 

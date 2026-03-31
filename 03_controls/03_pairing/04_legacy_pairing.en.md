@@ -14,13 +14,11 @@ tags:
 - BLE
 ---
 
+Various pairing methods can be used in Bluetooth. One of them is legacy pairing, designed for devices with limited computational capabilities. Due to these limitations, legacy pairing relies on obsolete and insecure key generation algorithms.
 
-Various pairing methods are used in Bluetooth. One of these methods is known as _Legacy pairing_ designed to simplify the connection between devices with limited computational capabilities.
-Due to this limited computational capability, key generation for _Legacy pairing_ uses obsolete and insecure algorithms.
+During the initial phase of the pairing procedure, devices exchange their respective capabilities through the Pairing Feature Exchange process. This exchange determines the derivation of the Long-Term Key (LTK), which is subsequently used to establish new connections in future sessions.
 
-During the initial phase of pairing, there is an exchange of characteristics called _Pairing Feature Exchange_, which determines the type of key generation method that can be used, either long term key (_LTK_) or short term key (_STK_). _STK_ keys are generated with _Legacy Pairings_ and should, therefore, be avoided.
-
-It is recommended to use pairing in the _LE Secure connection_ mode whenever the device's capabilities allow for it.
+Whenever device capabilities allow it, pairing should rely exclusively on Secure Connections Only mode, as Legacy Pairing is considered insecure and should not be used in any scenario. Secure Connections provides modern cryptographic security that prevents known attacks targeting older pairing methods.
 
 ## Description
 

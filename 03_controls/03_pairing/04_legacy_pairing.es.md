@@ -14,12 +14,11 @@ tags:
 - BLE
 ---
 
-En el ámbito de Bluetooth se emplean diversos métodos de emparejamiento. Uno de estos métodos se conoce como _Legacy pairing_ diseñado para simplificar la conexión entre dispositivos con capacidades computacionales limitadas.
-Debido a esta limitación de capacidad de cómputo, la generación de claves para el emparejamiento _Legacy pairing_ utiliza algoritmos obsoletos y poco seguros.
+Bluetooth permite distintos métodos de emparejamiento. Uno de ellos es el legacy pairing, diseñado para dispositivos con capacidades computacionales limitadas. Debido a esas limitaciones, el legacy pairing emplea algoritmos de generación de claves obsoletos e inseguros.
 
-Durante la primera fase en un emparejamiento se realiza un intercambio de características _Pairing Feature Exchange_ y estas determinan el tipo de método de generación de claves que puede ser long term key (_LTK_) o short term key (_STK_). Las claves _STK_ son las claves correspondientes a emparejamientos _Legacy parings_ y por tanto se deben evitar.
+Durante la fase inicial del procedimiento de emparejamiento, los dispositivos intercambian sus capacidades mediante el proceso Pairing Feature Exchange. Este intercambio determina la derivación de la clave a largo plazo (LTK), que se utilizará posteriormente para establecer nuevas conexiones.
 
-Se recomienda usar el emparejamiento en el modo de conexiones seguras _LE Secure connections_ siempre que las capacidades del dispositivo lo permitan. 
+Siempre que las capacidades del dispositivo lo permitan, el emparejamiento debe usar exclusivamente el modo Secure Connections Only, ya que el legacy pairing se considera inseguro y no debe utilizarse en ningún caso. Secure Connections proporciona seguridad criptográfica moderna que evita ataques conocidos contra métodos antiguos.
 
 ## Descripción del proceso
 

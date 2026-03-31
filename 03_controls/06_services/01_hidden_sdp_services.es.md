@@ -14,13 +14,13 @@ tags:
 - BLE
 ---
 
-En Bluetooth, un servicio se refiere a una funcionalidad o característica específica que un dispositivo ofrece a otros dispositivos dentro de una red Bluetooth. Cada servicio se identifica por un Identificador Único Universal (UUID), y puede ser descubierto y utilizado por otros dispositivos Bluetooth que soportan ese servicio en particular.
+En Bluetooth, un servicio representa una funcionalidad específica ofrecida por un dispositivo, identificada mediante un (UUID). Los servicios pueden ser descubiertos y utilizados por otros dispositivos Bluetooth que los soporten.
 
-Existen múltiples formas de descubrir los servicios disponibles en un dispositivo Bluetooth. Uno de los mecanismos para llevar a cabo este descubrimiento es el _Protocolo de Descubrimiento de Servicios_ o _SDP_ y su propósito es descubrir servicios en un dispositivo remoto, obtener información sobre los servicios y sus características, y establecer cómo conectarse a ellos.
+Bluetooth proporciona múltiples mecanismos para descubrir servicios disponibles, uno de ellos es el Protocolo de Descubrimiento de Servicios (SDP). SDP permite identificar servicios remotos, obtener sus características y determinar cómo conectarse a ellos.
 
-Si el _SDP_ está presente, debe estar configurado correctamente y listar todos los servicios que deban estar públicamente disponibles en el dispositivo. No listar un servicio en el SDP no impide que los usuarios accedan a él ni lo asegura.
+Para identificar servicios ocultos o no documentados, debe realizarse un descubrimiento SDP utilizando herramientas estándar. Tras obtener la lista de servicios anunciados mediante SDP, se deben aplicar técnicas adicionales para verificar que todos los servicios detectados coinciden con los anunciados. La presencia de un servicio no listado en SDP indica un servicio oculto, pero no garantiza seguridad, ya que el acceso sigue siendo posible.
 
-En el mismo contexto, si un servicio está correctamente configurado no es necesario ocultarlo y configurar correctamente los servicios en el _SDP_ permitirá que el dispositivo cumpla las Especificaciones de Bluetooth, lo que permitirá una mejor interoperatividad entre dispositivos.
+Si un servicio está adecuadamente protegido, ocultarlo no es necesario. Mantener listados SDP precisos mejora la interoperabilidad y cumple con las especificaciones Bluetooth.
 
 ## Descripción del proceso
 

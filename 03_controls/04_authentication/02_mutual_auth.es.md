@@ -14,11 +14,12 @@ tags:
 - BR/EDR
 ---
 
-Durante el proceso de autenticación Bluetooth, no es necesario que los dos dispositivos involucrados comprueben la identidad el otro. Esto puede dar pie a ataques de suplantación de identidad, en los que un dispositivo malicioso puede hacerse pasar por otro dispositivo.
+Durante la autenticación en Bluetooth Classic, los dos dispositivos no necesariamente verifican la identidad del otro, lo que puede permitir ataques de suplantación en los que un dispositivo malicioso se hace pasar por uno legítimo.
 
-El proceso de autenticación se puede realizar mediante los métodos:
- * `Legacy Authentication`: Realiza autenticación unilateralmente, de maestro a esclavo, y puede permitir que el maestro de una comunicación no sea autenticado. Se debe evitar ya que permite realizar ataques de suplantación de identidad.
- * `Secure Authentication`: Exige la autenticación de ambas partes de la comunicación, evitando que alguna de ellas sea suplantada por un tercer dispositivo.
+La autenticación puede realizarse mediante dos métodos:
+
+* Secure Authentication: Requiere autenticación mutua entre ambos dispositivos, impidiendo la suplantación por actores maliciosos.
+* Legacy Authentication: Autentica solo del central al periférico, dejando al central sin autenticar y vulnerable a ataques de suplantación. Este método debe evitarse.
 
 
 ## Descripción del proceso

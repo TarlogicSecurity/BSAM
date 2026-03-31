@@ -14,12 +14,9 @@ tags:
 - BLE
 ---
 
-En un ataque de repetición (o ataque de retransmisión) un atacante intercepta y retransmite un mensaje válido. Este ataque explota la posibilidad de que un mensaje legítimo pueda ser interceptado y reenviado por un atacante sin ser detectado que no existe ningún mecanismo que valide y evite enviar el mismo mensaje en múltiples ocasiones.
+En un ataque de repetición (o ataque de retransmisión), un atacante intercepta y retransmite un mensaje válido. Esto es posible si no existen mecanismos que detecten transmisiones repetidas o garanticen la frescura del mensaje.
 
-Si una aplicación requiere métodos de seguridad personalizados y decide utilizar la criptografía para un servicio en particular, los métodos de seguridad a nivel de la capa de aplicación deben ser adecuados para evitar ataques de repetición.
-
-No cumplir con este control puede significar que, a pesar de los esfuerzos por utilizar medidas de seguridad a nivel de aplicación, estas pueden eludirse.
-
+Si una aplicación implementa seguridad personalizada mediante criptografía en la capa de aplicación, estas medidas deben proteger adecuadamente contra ataques de repetición.
 
 ## Descripción del proceso
 

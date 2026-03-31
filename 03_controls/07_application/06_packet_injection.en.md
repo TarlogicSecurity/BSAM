@@ -14,12 +14,9 @@ tags:
 - BLE
 ---
 
-A packet injection attack is the deliberate sending of altered or crafted data packets for the purpose of manipulating or disrupting the normal operations of your connected devices. This is possible when there is no verification that the packet is correctly formatted or sent by a legitimate device.
+A packet injection attack consists of deliberately sending altered or crafted data packets to manipulate or disrupt the normal operation of connected devices. This is possible when there is no mechanism to verify that a packet is correctly formatted or originates from a legitimate device.
 
-If an application requires custom security methods and decides to use cryptography for a particular service, application layer security methods must be adecuate to prevent packet forging and injection attacks.
-
-Not complying with this control may mean that, despite of the efforts of using application level security measures, theese can be bypassed.
-
+If an application implements custom security mechanisms and uses cryptography for a specific service, these application layer controls must be sufficient to prevent packet forging and injection attacks. Otherwise, despite implementing application level security, those protections may be bypassed.
 
 ## Description
 

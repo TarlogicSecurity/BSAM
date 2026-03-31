@@ -14,12 +14,11 @@ tags:
 - BLE
 ---
 
+In Bluetooth, a shared link key must be established between two devices to encrypt communications. The pairing procedure introduces both devices to each other and generates this shared key. Different pairing methods exist, and some do not include mechanisms to verify the identity of the devices involved.
 
-In Bluetooth, it is necessary to establish a shared link key between two devices to encrypt communications. The pairing procedure "introduces" both devices to each other and establishes the shared key. There are different methods to establish the shared key, and some of these do not implement security controls to verify the identity of the involved devices.
+Pairing essentially functions as a form of manual authentication, where the user confirms that the two devices attempting to connect are indeed the intended ones, whether by entering a PIN, comparing a displayed code, or explicitly accepting or rejecting a pairing request. When this user‑driven validation is absent or weak, the risk of connecting to an unauthorized device increases significantly.
 
-The _just works_ method allows pairing using a numerical key, which is done without user interaction, and does not implement measures to ensure that the devices are known to the user. All the cryptographic material used for a _just works_ connection during the pairing process is sent over the Bluetooth band without any encryption, making it possible to capture this information with a sniffer and impersonate the device.
-
-Additionally, if the pairing mode is _legacy,_ it is susceptible to man-in-the-middle (mitm) attacks.
+The Just Works method performs pairing without user interaction and does not provide any mechanism for the user to verify the identity of the remote device. This means that any nearby device can initiate pairing and establish a valid shared key without the user's knowledge or approval. As a result, an attacker within range can still pair with the device and gain unauthorized access to device services.
 
 
 ## Description

@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-El primer paso a la hora de utilizar un dispositivo Bluetooth es el emparejamiento. En este momento se establece una relación de confianza entre ambos para permitir conexiones futuras. Este emparejamiento debe requerir,por seguridad, una validación y supervisión del usuario de modo que ante un nuevo intento de emparejamiento se pueda validar o cancelar el proceso.
+El emparejamiento es el paso inicial en la comunicación Bluetooth, donde se establece la confianza para permitir futuras conexiones. Un dispositivo puede operar en estado emparejable o no emparejable, solo cuando está en estado emparejable procesará solicitudes de emparejamiento entrantes. Si está en estado no emparejable, ignorará dichas solicitudes, evitando intentos de emparejamiento no deseados o no autorizados.
 
-Los dispositivos configurados para responder a peticiones de emparejamiento sin intervención del usuario permiten la extracción de parte de la información necesaria para ser suplantados (MAC, Nombre, Versión de Bluetooth soportada...). Se recomienda evitar que un dispositivo sea emparejable con otros dispositivos mientras no sea necesario. Preferentemente, el modo de emparejamiento ha de requerir la intervención física del usuario como por ejemplo pulsando un botón.
-
-Cuando los dispositivos permiten iniciar un proceso de emparejamiento, se pueden realizar peticiones e interactuar con el dispositivo, lo que supone un riesgo de seguridad si el dispositivo contiene información sensible.
+Los dispositivos que responden automáticamente a solicitudes de emparejamiento sin intervención del usuario pueden exponer información excesiva, aumentando el riesgo de suplantación e incrementando la superficie de ataque. Por lo tanto, el emparejamiento debe restringirse a situaciones estrictamente necesarias, y el dispositivo debe requerir interacción física del usuario, como pulsar un botón para iniciar el proceso.
 
 
 ## Descripción del proceso

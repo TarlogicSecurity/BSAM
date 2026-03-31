@@ -14,9 +14,11 @@ tags:
 - BLE
 ---
 
-A Bluetooth controller, when it is at the end or has already finished its product life cycle, will not receive updates from the manufacturer, meaning that the identification of vulnerabilities in its firmware or any other component will make the vulnerability permanent in the device and there will not be an official way to fix it.
+After identifying the Bluetooth controller, it is essential to consult the manufacturer's documentation to determine its current stage in the product life cycle.
 
-Therefore, it is important to check at what point in the lifecycle the Bluetooth controller is, as this can indicate whether it will be necessary to replace the device in the short, medium, or long term.
+A Bluetooth controller that is approaching the end, or has already reached the end of its life cycle, may no longer receive updates from the manufacturer. As a result, any vulnerabilities discovered in its firmware or other components will remain permanently unpatched, as there will be no official method to fix them.
+
+Understanding the controller's life cycle status is therefore crucial, as it helps determine whether the device will need to be replaced in the short, medium, or long term to maintain both operational stability and security.
 
 
 ## Description

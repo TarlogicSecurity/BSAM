@@ -14,16 +14,11 @@ tags:
 - BLE
 ---
 
-Los servicios de Bluetooth tienen una serie de permisos de manera que se puede limitar la manera de interactuar con ellos, si hace falta autenticacion previa o si se pueden leer o escribir.
+Los servicios Bluetooth definen permisos que regulan cómo puede interactuarse con ellos, incluyendo si requieren autenticación o si permiten operaciones de lectura o escritura. Para cada servicio expuesto, es necesario verificar que el control de acceso esté correctamente implementado.
 
-Para cada servicio Bluetooth expuesto en un dispositivo es necesario verificar si se ha implementado correctamente el control de acceso. 
+Debido a que el estándar Bluetooth prioriza la interoperabilidad, algunos servicios, especialmente los definidos bajo GATT, pueden permitir acceso sin autenticación. Además, según el Feature Exchange durante el establecimiento de la conexión, un dispositivo puede requerir distintos niveles de cifrado. No todos los niveles ofrecen el mismo grado de protección, algunos servicios pueden requerir elevar el nivel de cifrado (por ejemplo, pasar de Fase 2 a Fase 3 del emparejamiento) antes de permitir el acceso.
 
-Esto se debe a que el estándar está enfocado a la interconectividad y por tanto hay servicios de perfiles en los que prima la interconectividad y deben de permitir el acceso sin autenticación como puede ser el caso del servicio del perfil GATT. 
-
-Un dispositivo, debido al intercambio de características (_Feature Exchange_), podría haber necesitado cifrado para establecer la conexión y acceder al perfil GATT. Sin embargo, dado que existen varios tipos de cifrado, es posible que no brinde un nivel de seguridad suficiente para acceder a un _Servicio_ que requiera una mayor protección. Del mismo modo, puede ocurrir que, para acceder a ciertas funcionalidades expuestas en un servicio desde el perfil de atributos general, sea necesario incluso elevar el nivel de cifrado, pasando de la _Phase 2_ a la _Phase 3_ del emparejamiento, con el fin de acceder a dicho _Servicio_.
-
-Por ello es importante verificar la cifrado configurada para cada nivel de seguridad implementado en el dispositivo.
-
+Por ello, es esencial verificar que cada servicio esté protegido según sus requisitos de seguridad y que el nivel de cifrado configurado sea adecuado.
 
 ## Descripción del proceso
 

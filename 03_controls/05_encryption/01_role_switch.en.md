@@ -13,14 +13,14 @@ tags:
 - BR/EDR
 ---
 
+In Bluetooth communication there are two defined roles:
 
-In a Bluetooth communication there are two defined roles: 
- * _Master_: Is the main role of a "piconet" (network of Bluetooth devices) and defines the physical parameters of the connections.
- * _Slave_: Device that simply follows the steps of the master.
- 
-Role switching can be used by devices that can only act as slaves to avoid being masters of the connection. This role switching procedure usually takes place during the establishment of a connection and always before the authentication phase.
+* Central: Defines the physical parameters of the connection within the piconet.
+* Peripheral: Follows the Central's parameters.
 
-If it takes place between the authentication phase and the encryption phase, it could be used to attack the encryption phase and try to extract the temporary key used during a connection, attacking the confidentiality of the data of that connection. Therefore, it is preferable to deny the use of the role change mechanism after the authentication step if it is not necessary for the normal operation of the device.
+Role switching can be used by devices designed to operate only as peripherals to avoid being the central of a connection. This mechanism normally occurs during connection establishment and always before authentication.
+
+If a role change occurs after authentication and before encryption, it could be exploited to attack the encryption phase and attempt to extract the temporary key used during the connection, compromising confidentiality. Therefore, devices should not allow role changes after authentication unless strictly required for normal operation.
 
 
 ## Description

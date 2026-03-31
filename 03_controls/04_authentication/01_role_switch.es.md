@@ -13,19 +13,16 @@ tags:
 - BR/EDR
 ---
 
-En una comunicación Bluetooth existen dos roles definidos: 
- * Maestro (_master_): Es el rol principal de una "piconet" (red de dispositivos Bluetooth) y define los parámetros físicos de las conexiones.
- * Esclavo (_slave_): Dispositivo que se limita a seguir los pasos del maestro. 
- 
- Tras el inicio de una conexión física, el dispositivo iniciador se convierte automáticamente en maestro.
+En Bluetooth Classic (BR/EDR), los dispositivos operan con dos roles:
 
-En este contexto, el cambio de rol se utiliza habitualmente por dispositivos que sólo pueden actuar como esclavos para evitar ser maestros de la conexión cuando han sido iniciadores de esta.
+* Central: establece parámetros físicos.
+* Peripheral: sigue las instrucciones del Central.
 
-Sin embargo, este mecanismo puede ser abusado para evitar el proceso de autenticación por parte de un dispositivo que actúa como maestro, ya que el proceso de autenticación _Legacy_ sólo exige que el dispositivo maestro autentique al esclavo, pero no a la inversa.
+El dispositivo que inicia la conexión adopta automáticamente el rol Central.
 
-Por ejemplo, la vulnerabilidad BIAS utiliza esta capacidad para que un dispositivo esclavo pase a ser el maestro de la comunicación justo antes de la autenticación, y así evitar ser autenticado por el otro extremo. Con esta estrategia se puede suplantar la identidad de otros dispositivos frente a una víctima con la que el dispositivo suplantado estuviese emparejado.
+El cambio de rol puede explotarse para evadir autenticación, ya que en autenticación heredada solo el Central autentica al Peripheral. Ataques como BIAS aprovechan este comportamiento forzando un cambio de rol antes de la autenticación, permitiendo que un atacante suplante un dispositivo previamente emparejado.
 
-Es preferible no permitir el uso del mecanismo de cambio de rol de esclavo a maestro si no es necesario para el funcionamiento normal del dispositivo.
+Para reducir este riesgo, este mecanismo debe evitarse salvo que sea estrictamente necesario.
 
 ## Descripción del proceso
 

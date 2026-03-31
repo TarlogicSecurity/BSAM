@@ -14,16 +14,9 @@ tags:
 - BLE
 ---
 
+In Bluetooth, it is necessary to establish a shared link key between two devices to authenticate them and encrypt communications. Pairing introduces both devices to each other and generates this shared key through different methods. Some devices use out of band (OOB) data, exchanged through external technologies such as NFC or Wi Fi.
 
-
-In Bluetooth it is necessary to establish a shared link key between two devices to subsequently authenticate them to each other or encrypt communications. The pairing procedure "introduces" the two devices to each other and establishes the shared key using different methods. Some Bluetooth devices use pairing methods using out-of-band data (OOB Data), which is data exchanged via other technologies, such as NFC or WiFi.
-
-Through an OOB mechanism, identification data of each device is exchanged, which is necessary for the authentication process during pairing. This is equivalent to the manual exchange of PIN numbers.
-
-Once the identification data has been exchanged, it is assumed that the pairing is protected against _MitM_ and that both devices are known to the user. However, an insecure OOB communication mechanism can lead an attacker to capture traffic and compromise the pairing. A suitable OOB communication method must have protection against _sniffing_.
-
-The method of checking this control depends on the OOB mechanism used.
-
+Through an OOB mechanism, each device exchanges the identification data required for authentication, functioning similarly to a manual PIN exchange. Once this data is exchanged, the pairing is considered protected against MitM attacks, assuming the OOB channel is secure. However, if the OOB communication method is not properly protected against sniffing, an attacker may capture the exchanged data and compromise the pairing. The verification method for this control depends on the specific OOB mechanism used.
 
 ## Description
 

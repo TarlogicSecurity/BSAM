@@ -14,12 +14,11 @@ tags:
 - BLE
 ---
 
-En Bluetooth es necesario establecer una clave de enlace compartida entre dos dispositivos para cifrar las comunicaciones. El procedimiento de emparejamiento "presenta" a ambos dispositivos entre sí y establece la clave compartida. Existen diferentes métodos para establecer la clave compartida y algunos de estos no implementan controles de seguridad para verificar la identidad de los dispositivos involucrados. 
+En Bluetooth, debe establecerse una clave compartida entre dos dispositivos para cifrar comunicaciones. El procedimiento de emparejamiento introduce los dispositivos entre sí y genera esta clave. Existen métodos de emparejamiento que no verifican la identidad de los dispositivos participantes.
 
-El método _just works_ permite realizar un emparejamiento mediante una clave numérica, que se realiza sin interacción del usuario, y no implementa medidas para asegurarse que los dispositivos son conocidos por el usuario. Todo el material criptográfico que se usa para una conexión _just works_ durante el proceso de emparejamiento es enviado en la banda de Bluetooth sin ningún tipo de cifrado por lo que es posible con un sniffer capturar esta información y suplantar al dispositivo.
+El emparejamiento actúa esencialmente como una autenticación manual: el usuario confirma que ambos dispositivos pertenecen a la misma parte, ya sea introduciendo un PIN, comparando códigos en pantalla o aceptando/rechazando solicitudes. Cuando esta validación por el usuario es débil o inexistente, aumenta significativamente el riesgo de conectar con un dispositivo no autorizado.
 
-Adicionalmente si el modo de emparejamiento es _legacy_ este es susceptible a ataques de tipo _mitm_.
-
+El método Just Works realiza el emparejamiento sin interacción del usuario y no proporciona ningún mecanismo de verificación de identidad. Esto significa que cualquier dispositivo cercano puede iniciar el emparejamiento y establecer una clave válida sin conocimiento ni aprobación del usuario. Como resultado, un atacante dentro del alcance puede emparejarse y obtener acceso no autorizado.
 
 ## Descripción del proceso
 

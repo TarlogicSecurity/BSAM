@@ -14,20 +14,19 @@ tags:
 - BLE
 ---
 
-A MAC address (Media Access Control) is a unique identifier assigned to a device's network interface for identification on a device network. These addresses are used in communication networks that utilize protocols from the IEEE 802 family, including Bluetooth (IEEE 802.15.1).
+In Bluetooth, two main types of MAC addresses are used:
 
-In Bluetooth, there are two types of MAC addresses:
+* Public: A fixed and unchangeable identifier assigned to the device.
+* Random: A changeable, pseudorandom generated identifier.
 
-* _Public MAC Address_: This address is the actual and fixed device identification, which cannot be changed.
-* _Random MAC Address_: This address is randomly generated to represent the device and can be altered.
+Random MAC addresses are divided into two categories:
 
-Within the group of _Random MAC Addresses_, there are two subgroups: those that allow connection to the device and those that do not.
+* Resolvable: Allow derivation of the Public MAC Address using an Identity Resolving Key (IRK), if available.
+* Non resolvable: Purely random and cannot be linked back to the device's Public MAC Address.
 
-The Random _MAC Addresses_ that permit connection and access to a set of Bluetooth services do not necessarily need to be resolved against the _Public MAC Address_. However, it is possible to calculate the _Public MAC Address_ from a _Random MAC Address_.
+Using Random MAC Addresses during device discovery is essential to mitigate device tracking and prevent identity spoofing attacks.
 
-The generation of _Random MAC Addresses_ during device discovery is essential to prevent attacks such as `BlueTrust`.
-
-__Note__: There is a similarity between the real _MAC address_ in Wi-Fi and the Public MAC Address in Bluetooth, just as there is a similarity between the _random MAC address_ in Wi-Fi and _random MAC Address_ in Bluetooth.
+Also, although a device may claim to use random MAC addresses, it is important to verify that the address actually changes over time, as a static or rarely rotated "random" MAC fails to provide meaningful privacy protection.
 
 ## Description
 

@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-The first step when using a Bluetooth device is pairing, at which time trust is established between the two to allow future connections. This pairing for security reasons must require user validation and supervision so that a new pairing attempt can validate or cancel the process.
+Pairing is the initial step in Bluetooth communication, where trust is established to enable future connections. A device may operate in either a pairable or non‑pairable state, only when it is in a pairable state will it process incoming pairing requests. If the device is set to a non‑pairable state, it will ignore such requests, preventing unintended or unauthorized pairing attempts.
 
-Devices configured to answer to pairing requests without user intervention allow the extraction of part of the information necessary to be impersonated (MAC, Name, Bluetooth Version supported...). It is recommended to prevent a device from being paired with other devices if it is not necessary. Preferably, the pairing mode should require physical user intervention such as pressing a button.
-
-A paired device can make requests and interact with the audited device and may therefore pose a security risk if the device contains sensitive information.
+Devices that automatically respond to pairing requests without user intervention may expose excessive device information, increasing the risk of impersonation and expanding the attack surface. Pairing should therefore be restricted to situations where it is strictly necessary, and the device should require physical user interaction such as pressing a button to initiate pairing.
 
 
 ## Description

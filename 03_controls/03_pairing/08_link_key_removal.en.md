@@ -13,20 +13,14 @@ tags:
 - BR/EDR
 - BLE
 ---
-After pairing between two devices, they store the link keys generated in this process so that they can be used in the future to establish new connections.
-Bluetooth devices must avoid deleting shared link keys when receiving new pairing requests. This can be exploited by attackers to hijack communications.
 
-There are minor differences in this case between _Classic Bluetooth_ and _Low Energy Bluetooth_:
+After pairing, devices store the generated link keys so they can be reused in future connections. Bluetooth devices should avoid deleting these shared keys when receiving new pairing requests, as removing previously established keys can create scenarios that compromise the device’s security.
 
-* In _Bluetooth Classic_ (BR/EDR), for authentication and encryption functions, Bluetooth uses a shared key created during pairing, which is stored in a database on each device. Some Bluetooth devices delete this shared key when they receive a new pairing request that appears to come from the original device.
+* If an attacker forces a disconnection and triggers a new pairing process, the device may erase the previously stored link key and generate a new one. This re‑pairing scenario allows the attacker to replace the legitimate key with one negotiated under their control, effectively enabling them to intercept or manipulate future communications.
 
-* In Bluetooth Low Energy (BLE), after the phase 2 pairing, the Long-Term Key (LTK) and Short-Term Key (STK) are distributed, but only the LTK is stored to be reused in future reconnections. The standard does not describe the size and characteristics of the security database, and it is possible that a local device (initiator) whose MAC address is known may initiate a new pairing, leading to remove of this key from the remote device (responder).
+* By forcing the user to repeat the pairing procedure, an attacker can also capture the new pairing attempt and exploit weaknesses in the process itself. This includes brute‑forcing the PIN code, whose entropy is typically lower than other components of Bluetooth security, or leveraging user confusion to trick them into approving an unauthorized pairing request.
 
-sIn either of the two cases, this allows an attacker to force the disconnection between two devices and take advantage of the situation to establish a new pairing, thereby erasing the known key between the two legitimate devices.
-
-This situation also enables the capture of a new legitimate pairing between both devices with the goal of obtaining the connection key, using brute force on the PIN code, which often has lower entropy than other parts of Bluetooth encryption.
-
-This is a method of hijacking communications between two devices commonly referred to as Bluesnarfing. To prevent it, shared key removal should be restricted only when both devices are properly linked in an authenticated connection.
+This technique, commonly known as Bluesnarfing, allows an attacker to take control of the communication between two devices. To mitigate this risk, shared key removal must only occur when both devices are properly linked through an authenticated connection.
 
 
 ## Description

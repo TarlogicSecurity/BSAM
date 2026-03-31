@@ -15,11 +15,11 @@ tags:
 ---
 
 
-A Bluetooth device with a signal strength that allows interaction over long distances increases its exposure. For this reason, it is necessary to keep the signal strength of a Bluetooth device small, covering only the area necessary for its intended use.
+A Bluetooth device with sufficient signal power for long distance interaction increases its exposure. For this reason, the device's signal strength should be limited to cover only the area required for its intended use.
 
-This is also influenced by the environment, noise sources and the receiving antenna: depending on the signal-to-noise ratio (SNR) the Bluetooth device may allow connections at different distances.
+The device's effective communication range depends on environmental conditions, noise sources, and antenna characteristics, as these factors affect the signal to noise ratio (SNR) and, consequently, the distance at which connections are possible.
 
-To check the signal connection area, it will be necessary to describe the characteristics of the equipment and the environment in which the measurements are made, so that this is recorded in the evaluation of the result and can be compared with other tests.
+To ensure reliable assessment, the equipment used and the environmental conditions during measurement must be documented for consistent evaluation and comparison with future tests.
 
 
 ## Description

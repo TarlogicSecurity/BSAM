@@ -15,11 +15,11 @@ tags:
 ---
 
 
-A lo largo de la historia del estándar de Bluetooth se han identificado problemas de seguridad y que han dado lugar a vulnerabilidades. Los dispositivos con capacidades Bluetooth raramente implementan unicamente la última versión del estándar, sino que por compatibilidad proporcionan soporte a versiones anteriores que pueden tener problemas de seguridad no resueltos.
+Identificar si el dispositivo está afectado por vulnerabilidades conocidas es un paso fundamental en una auditoría de seguridad.
 
-Al igual que con las vulnerabilidades en el controlador y en la pila, se ha de verificar qué vulnerabilidades del estándar afectan al dispositivo analizado.
+A lo largo de la historia del estándar Bluetooth se han identificado múltiples problemas de seguridad que han dado lugar a vulnerabilidades. Mantener la retrocompatibilidad requiere que los dispositivos soporten versiones antiguas del estándar, lo cual puede ser inseguro, ya que algunas versiones heredadas contienen debilidades explotables. Al igual que con los problemas a nivel de drivers y pila, es necesario verificar qué vulnerabilidades del estándar afectan al dispositivo analizado.
 
-También ha de tenerse en cuenta que las especificaciones de Bluetooth tienen un ciclo de vida anunciado por el _Bluetooth SIG_. Es importante que la version de la especificación de Bluetooth utilizada vaya a tener soporte durante el ciclo de vida del producto ya que, de aparecer nuevas vulnerabilidades en el estándar, estas no podrán ser solucionadas.
+Las especificaciones Bluetooth también tienen un ciclo de vida definido, por lo que la versión implementada debe mantenerse soportada para garantizar que cualquier nueva vulnerabilidad pueda ser corregida.
 
 
 ## Descripción del proceso

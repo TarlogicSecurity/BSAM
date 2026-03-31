@@ -13,12 +13,10 @@ tags:
 - BR/EDR
 - BLE
 ---
-The bluetooth standard evolves and from time to time a new version becomes available, so the devices can include mechanisms to update this bluetooth standard by a bluetooth stack with new capabilities and wich fixes security issues.
 
-There is always a possibility that either bugs or security flaws will be found in a device's Bluetooth stack during the lifespan of the device. The only mechanism that can be used to solve those bugs and security flaws is via Bluetooth stack (a part of device's firmware) updates.
+The Bluetooth standard evolves over time, introducing new versions that add capabilities and address security issues. For this reason, devices should include mechanisms to update the Bluetooth stack, which forms part of the device’s firmware.
 
-For the above reasons, it is fundamental to include a Bluetooth stack update or a full firmware update mechanism in a device, otherwise if a problem is found, it will be impossible to fix it without recalling all the devices in use.
-
+Bugs or security vulnerabilities may emerge in the Bluetooth stack during the lifespan of a device, and software based stack updates are the way to correct them. Therefore, incorporating a Bluetooth stack update mechanism is essential. Without it, any identified issue would be impossible to fix without recalling all deployed devices.
 
 ## Description
 

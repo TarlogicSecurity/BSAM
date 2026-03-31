@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-Los dispositivos con capacidades Bluetooth requieren de herramientas y aplicaciones que hagan uso de estas comunicaciones, si se quiere dotar de nuevas funcionalidades o corregir problemas, estos dispositivos han de contar con un mecanismo de actualización.
+Los dispositivos con capacidades Bluetooth dependen de software de capa de aplicación que gestiona y consume los servicios Bluetooth. Para agregar nuevas funciones o corregir problemas, estos dispositivos requieren un mecanismo de actualización de software.
 
-En la vida útil de un dispositivo existe la posibilidd de que se encuentren errores o vulnerabilidades de seguridad en las aplicaciones software. Estas aplicaciones pueden ser entendidas como aplicaciones en dispositivos como los smartphones pero también aplicaciones que consumen los recursos Bluetooth en sistemas embedidos menos potentes como las aplicaciones realizadas en plataformas de hardware y software libre. El único mecanismo que se puede utilizar para solucionar estos errores y vulnerabilidades de seguridad es mediante actualizaciones de las aplicaciones software.
-
-Por las razones mencionadas anteriormente es fundamental incluir un mecanismo de actualización del software que consume los recursos del controlador Bluetooth en un dispositivo. De lo contrario, si se encuentra un problema, será inviable solucionarlo sin tener que retirar todos los dispositivos en uso.
+Como pueden surgir fallos o vulnerabilidades en esta capa a lo largo del tiempo, las actualizaciones son esenciales. Sin ellas, resolver los problemas identificados sería imposible sin retirar los dispositivos.
 
 ## Descripción del proceso
 

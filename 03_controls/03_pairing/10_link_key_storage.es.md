@@ -14,11 +14,11 @@ tags:
 - BLE
 ---
 
-El proceso de emparejamiento concluye con el establecimiento de una clave de enlace entre los dispositivos que ambos deben conservar para autenticarse y cifrar futuras conexiones.
+El proceso de emparejamiento concluye con la creación de una clave que ambos dispositivos almacenan para autenticar y cifrar futuras conexiones. Debido a que esta clave protege la confidencialidad de las comunicaciones Bluetooth, su almacenamiento debe ser seguro.
 
-El almacenamiento de estas claves de enlace puede ser crítico para mantener la confidencialidad en las conexiones Bluetooth, por lo que su almacenamiento debe ser seguro. En los sistemas Linux es habitual que se almacenen en ficheros en claro protegidos por los permisos de acceso. Esta protección puede no ser suficiente en un dispositivo sin almacenamiento cifrado: un atacante puede acceder a los datos almacenados, extraer las claves y utilizarlas mientras sean válidas para comunicarse con el otro extremo.
+En sistemas Linux, las claves suelen almacenarse en archivos de texto plano protegidos solo por permisos de filesystem. En dispositivos sin almacenamiento cifrado, esto puede ser insuficiente, ya que un atacante con acceso al filesystem podría extraerlas.
 
-En dispositivos pequeños o con implementaciones propietarias (auriculares y altavoces Bluetooth, por ejemplo), este almacenamiento puede estar definido por el fabricante y se debe verificar la confidencialidad de las claves mediante técnicas de reversing o accediendo al firmware del dispositivo. 
+En dispositivos pequeños o con implementaciones propietarias (p. ej., auriculares y altavoces Bluetooth), los mecanismos de almacenamiento varían según el fabricante. En estos casos, deben verificarse mediante ingeniería inversa o análisis de firmware.
 
 ## Descripción del proceso
 

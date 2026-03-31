@@ -14,9 +14,11 @@ tags:
 - BLE
 ---
 
-Un controlador Bluetooth, cuando se encuentra al final de su ciclo de vida de producto, no recibirá actualizaciones por parte del fabricante, por lo que la identificación de vulnerabilidades en su firmware o en cualquier otro componente provocará que la vulnerabilidad sea permanente en el dispositivo y no existirá una manera oficial de solucionarla.
+Tras identificar el controlador Bluetooth, es esencial consultar la documentación del fabricante para determinar su estado actual dentro del ciclo de vida del producto.
 
-Por ello, es importante comprobar en qué punto del ciclo de vida se encuentra el controlador Bluetooth del dispositivo, ya que esto puede indicar si será necesario cambiar el dispositivo a corto, medio o largo plazo.
+Un controlador Bluetooth que se encuentra próximo al final, o que ya ha alcanzado el final de su ciclo de vida, puede dejar de recibir actualizaciones del fabricante. Como resultado, cualquier vulnerabilidad descubierta en su firmware u otros componentes permanecerá sin parchear de forma permanente, ya que no existirá un método oficial para corregirlas.
+
+Comprender el estado del ciclo de vida del controlador es, por tanto, crucial, ya que ayuda a determinar si será necesario sustituir el dispositivo a corto, medio o largo plazo para mantener tanto la estabilidad operativa como la seguridad.
 
 
 ## Descripción del proceso

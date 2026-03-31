@@ -14,9 +14,7 @@ tags:
 - BLE
 ---
 
-Applications use Bluetooth services to transmit information among paired devices.
-
-Data should always be treated as untrusted, so these applications must implement the necessary controls to validate that both input and output data are appropriate.
+Applications use Bluetooth services to exchange information between paired devices. Because all data must be treated as untrusted, applications must implement appropriate controls to ensure that both incoming and outgoing data are properly validated and handled securely.
 
 ## Description
 

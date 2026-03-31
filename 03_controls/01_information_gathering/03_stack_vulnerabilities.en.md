@@ -15,9 +15,9 @@ tags:
 ---
 
 
-The protocols of the higher layers of the standard are implemented in the host stack (BlueZ, Bluetooth drivers in Windows, etc.). If vulnerabilities have been introduced in this stack, it is possible that they affect the entire device, so they can be critical to its security.
+Identifying whether the device is affected by known vulnerabilities is a fundamental step in a security audit.
 
-Just like with vulnerabilities in the controller, it must be verified which stack vulnerabilities affect the analyzed device.
+The higher layer protocols of the Bluetooth standard are implemented in the host stack (e.g., BlueZ or Windows Bluetooth drivers). Vulnerabilities introduced in this stack may impact the device and therefore represent a critical security risk. As with controller level vulnerabilities, it is necessary to confirm which host stack vulnerabilities apply to the analyzed device.
 
 
 ## Description

@@ -14,10 +14,9 @@ tags:
 - BLE
 ---
 
-Las claves temporales de cifrado de una conexión de Bluetooth pueden tener distintos niveles de entropía. Para decidir como de segura es una clave temporal de cifrado de una conexión Bluetooth, durante el inicio del proceso de cifrado se negocia el número de bytes de entropía que tendrá.
+Las claves temporales de cifrado usadas en una conexión Bluetooth pueden tener distintos niveles de entropía. El número de bytes de entropía se negocia al inicio del proceso de cifrado y determina la fortaleza de la clave temporal.
 
-Claves pequeñas, por debajo de 7 bytes, pueden ser descubiertas mediante ataques de fuerza bruta, vulnerando la confidencialidad de las comunicaciones.
-
+Las claves con menos de 7 bytes de entropía pueden recuperarse mediante ataques de fuerza bruta, comprometiendo la confidencialidad de la comunicación.
 
 ## Descripción del proceso
 

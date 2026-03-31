@@ -14,9 +14,7 @@ tags:
 - BLE
 ---
 
-Las aplicaciones utilizan los servicios Bluetooth para transmitir información entre los dispositivos emparejados. 
-
-Siempre se han de tratar los datos como no confiables, por lo que estas aplicaciones han de implementar los controles necesarios para validar que los datos de entrada y salida son adecuados.
+Las aplicaciones utilizan servicios Bluetooth para intercambiar datos entre dispositivos emparejados. Debido a que todos los datos deben considerarse no confiables, las aplicaciones deben implementar controles adecuados para validar y gestionar los datos de forma segura.
 
 ## Descripción del proceso
 

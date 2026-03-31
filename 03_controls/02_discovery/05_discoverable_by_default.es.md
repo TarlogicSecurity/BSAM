@@ -14,13 +14,11 @@ tags:
 - BLE
 ---
 
-Los dispositivos Bluetooth tienen la capacidad de ser descubribles en todo momento, ya sea porque se anuncian activamente mediante el envío de paquetes de _advertising_ o porque ante consultas de tipo _inquiry_ responden indicando que se encuentran disponibles. Esto es así por comodidad de cara al usuario, de manera que los dispositivos se conectan automáticamente cuando estén cerca. 
-Es una buena práctica que este descubrimiento no este activo por defecto y que lo esté únicamente bajo demanda del usuario, de manera que pueda activar y desactivar este estado para no ser detectado e identificado cuando no es necesario, aun penalizando la usabilidad y experiencia de usuario.
+Los dispositivos Bluetooth pueden permanecer en modo visible anunciándose continuamente o respondiendo a solicitudes de descubrimiento, facilitando conexiones automáticas para comodidad del usuario. Sin embargo, la visibilidad no debe estar habilitada por defecto, solo debe activarse cuando sea estrictamente necesario. Permitir que el usuario controle manualmente este estado ayuda a evitar detecciones innecesarias, incluso si afecta a la usabilidad.
 
+Los dispositivos que permanecen visibles exponen información como la dirección MAC, el nombre del dispositivo y la versión de Bluetooth soportada, lo que puede utilizarse para rastreo, suplantación u otros ataques dirigidos. Por lo tanto, la visibilidad debe permanecer desactivada excepto cuando sea necesaria para el emparejamiento o conexión.
 
-Los dispositivos descubribles por defecto permiten la extracción de parte de la información necesaria para ser suplantados (MAC, Nombre, Versión de Bluetooth soportada...), además de otra información relevante. Se recomienda mantener el dispositivo en estado _no descubrible_ mientras no sea necesario realizar el proceso de emparejamiento o la conexión.
-
-Los dispositivos con controles de entrada, como botones y teclados, o elementos similares, deben permitir cambiar el estado de descubribilidad mediante estos controles.
+Los dispositivos equipados con controles de entrada (por ejemplo, botones o teclados) deben proporcionar un medio para activar o desactivar la visibilidad mediante estos controles.
 
 ## Descripción del proceso
 

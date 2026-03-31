@@ -14,9 +14,7 @@ tags:
 - BLE
 ---
 
-Para cada uno de los mecanismos de actualización disponibles en un dispositivo es necesario realizar una verificación para asegurar que estén firmadas digitalmente las actualizaciones.
-
-Si un dispositivo utiliza y acepta actualizaciones o software no firmados, entonces es posible crear piezas de software personalizadas, firmware y aplicaciones que puedan acceder a datos o realizar acciones maliciosas al utilizar el dispositivo de maneras no previstas por el fabricante y el usuario.
+Para cada mecanismo de actualización disponible, es necesario verificar que las actualizaciones estén firmadas digitalmente. Si un dispositivo acepta firmware o software sin firmar, un atacante podría crear componentes maliciosos capaces de acceder a datos o realizar acciones no autorizadas.
 
 ## Descripción del proceso
 
