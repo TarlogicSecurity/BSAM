@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-Los dispositivos bluetooth pueden contar con capacidades de actualizacion del firmware del controlador.
+Los dispositivos Bluetooth deben proporcionar capacidades de actualización de firmware para sus controladores o componentes de driver. Pueden surgir fallos o vulnerabilidades en el firmware del controlador, y la única forma viable de corregirlos es mediante actualizaciones.
 
-Siempre existe la posibilidad de que se encuentren errores o vulnerabilidades de seguridad en el firmware del controlador de un dispositivo. El único mecanismo que se puede utilizar para solucionar estos errores y vulnerabilidades de seguridad es mediante actualizaciones de firmware.
-
-Por las razones mencionadas anteriormente es fundamental incluir un mecanismo de actualización del firmware del controlador en un dispositivo. De lo contrario, si se encuentra un problema, será inviable sin tener que retirar todos los dispositivos en uso.
+Por este motivo, incorporar un mecanismo de actualización de firmware del controlador es esencial. Sin él, cualquier fallo descubierto sería imposible de corregir sin retirar o reemplazar físicamente los dispositivos.
 
 ## Descripción del proceso
 El procedimiento consiste en verificar que existe un mecanismo de actualización para actualizar el firmware del controlador en el dispositivo en estudio.

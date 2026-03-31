@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-Bluetooth devices may have driver firmware update capabilities.
+Bluetooth devices should provide firmware update capabilities for their controller or driver components. Bugs or security vulnerabilities may arise in the controller firmware, and the only viable method to correct them is through firmware updates.
 
-There is always a possibility that either bugs or security flaws will be found in a device's controller firmware. The only mechanism that can be used to solve those bugs and security flaws is via firmware updates.
-
-For the above reasons, it is fundamental to include a controller firmware update mechanism in a device, otherwise if a problem is found,  it will be impossible to fix it without recalling all the devices in use.
+For this reason, incorporating a controller firmware update mechanism is essential. Without it, any discovered flaw would be impossible to remediate without physically recalling or replacing all deployed devices.
 
 
 ## Description

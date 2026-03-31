@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-Bluetooth devices can send publicly and without the need of authentication or authorization their name and or any other related data.
+Bluetooth devices can publicly broadcast their name and related data without requiring authentication or authorization. This name may reveal information about the device type, the user, or even include identifiers such as the MAC address or a unique ID. To reduce unnecessary exposure, devices should use a generic name that discloses only the minimum required information.
 
-The Bluetooth name of a device can give information about the type of device, its user or include the MAC or ID itself. It is recommended that the device has a generic name and discloses the minimum necessary information.
-
-Knowing who owns a Bluetooth device allows targeted attacks and leads to a privacy problem by being able to uniquely identify a device at a specific time and place.
+Revealing identifiable details enables correlation with a specific device or user, facilitating targeted attacks and creating privacy risks by allowing the device to be uniquely identified and tracked at a particular time and location.
 
 ## Description
 

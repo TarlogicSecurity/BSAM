@@ -15,11 +15,11 @@ tags:
 ---
 
 
-Throughout the history of the Bluetooth standard, security issues have been identified and have led to vulnerabilities. Devices with Bluetooth capabilities rarely implement only the latest version of the standard, instead, for compatibility reasons, support earlier versions that may have unresolved security issues.
+Identifying whether the device is affected by known vulnerabilities is a fundamental step in a security audit.
 
-As with vulnerabilities in the driver and stack, it's necessary to verify which vulnerabilities of the standard affect the analyzed device.
+Throughout the history of the Bluetooth standard, multiple security issues have been identified and led to vulnerabilities. Maintaining backward compatibility requires devices to support older versions of the standard, which can be unsafe, as some legacy versions contain exploitable security weaknesses. As with driver and stack level issues, it is necessary to verify which standard vulnerabilities affect the analyzed device.
 
-It should also be noted that the different Bluetooth specifications have a lifecycle announced by the _Bluetooth SIG_. It is important that the used Bluetooth specification version will be supported during the product lifecycle because if new vulnerabilities in the standard appear, they will not be fixed.
+Bluetooth specifications also have a defined lifecycle, so the implemented version must remain supported to ensure that any new vulnerabilities in the standard can be addressed.
 
 
 ## Description

@@ -14,20 +14,13 @@ tags:
 - BLE
 ---
 
-Una vez realizado el emparejamiento entre dos dispositivos, estos almacenan las claves de enlace generadas en este proceso, de manera que las puedan utilizar en el futuro para establecer nuevas conexiones.
-Los dispositivos Bluetooth deben evitar eliminar claves de enlace compartidas al recibir nuevas peticiones de emparejamiento. Esto puede ser aprovechado por atacantes para secuestrar las comunicaciones.
+Tras el emparejamiento, los dispositivos almacenan las claves generadas para reutilizarlas en futuras conexiones. Los dispositivos Bluetooth deben evitar eliminar estas claves cuando reciben nuevas solicitudes de emparejamiento, ya que podría crearse un escenario inseguro.
 
-Existen pequeñas diferencias para este caso entre Bluetooth clásico y baja energía:
+* Si un atacante fuerza una desconexión y provoca un nuevo emparejamiento, el dispositivo podría borrar la clave anterior y generar una nueva bajo control del atacante. Este escenario permite interceptar o manipular comunicaciones futuras.
 
-* _Bluetooth Classic_ (BR/EDR) en las funciones de autenticación y cifrado, Bluetooth utiliza una clave compartida, creada durante el emparejamiento, que es almacenada en una base de datos en cada dispositivo. Algunos dispositivos Bluetooth eliminan esta clave compartida al recibir una nueva petición de emparejamiento aparentemente proveniente del dispositivo original.
+* Forzar al usuario a repetir el emparejamiento también puede permitir al atacante capturar el nuevo intento y explotar debilidades del proceso, como atacar el PIN o inducir al usuario a aceptar un emparejamiento no autorizado.
 
-* _Bluetooth Low Energy_ (BLE) tras el emparejamiento en fase 2 se distribuyen las claves LTK y STK pero únicamente se almacén las claves LTK para ser reutilizadas en futuras reconexiones. No se describe en el estándar el tamaño y las características de la base de datos de seguridad y es posible que un dispositivo local (iniciador) cuya dirección MAC es conocida inicie un nuevo emparejamiento y esta clave sea borrada del dispositivo remoto (respondedor).
-
-En cualquiera de los dos casos esto permite que un atacante pueda forzar el desemparejamiento entre dos dispositivos y aproveche la situación para generar un nuevo emparejamiento borrando así la clave conocida entre los dos dispositivos legítimos. 
-
-Esta situación también le permite la captura de un nuevo emparejamiento legítimo entre ambos dispositivos con el objetivo de obtener la clave de una conexión, haciendo uso de la fuerza bruta del código PIN, con menor entropía que otras partes del cifrado de Bluetooth.
-
-Esta es una forma de secuestrar las comunicaciones entre dos dispositivos que se denomina Bluesnarfing. Para prevenirlo, se debe restringir la eliminación de la clave compartida únicamente cuando ambos dispositivos están debidamente vinculados en una conexión autenticada.
+Esta técnica, conocida como Bluesnarfing, permite al atacante tomar control de la comunicación. Para mitigarlo, la eliminación de claves solo debe ocurrir cuando ambos dispositivos estén autenticados.
 
 
 ## Descripción del proceso

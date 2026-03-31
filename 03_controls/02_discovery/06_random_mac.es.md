@@ -14,20 +14,19 @@ tags:
 - BLE
 ---
 
-Una dirección MAC (Media Access Control) es un identificador único asignado a la interfaz de red de un dispositivo para su identificación en una red de dispositivo. Estas direcciones son utilizadas en las redes de comunicaciones que usan los protocolos de la familia IEEE 802, entre el que se incluye Bluetooth (IEEE 802.15.1).
+En Bluetooth, se utilizan dos tipos principales de direcciones MAC:
 
-En Bluetooth, existen dos tipos de direcciones MAC:
+* Pública: Un identificador fijo e inmutable asignado al dispositivo.
+* Aleatoria: Un identificador modificable generado de forma pseudo aleatoria.
 
-* _MAC Pública_: Esta dirección es la identificación real y fija del dispositivo, la cual no puede modificarse.
-* _MAC Aleatoria_: Esta dirección es generada de forma aleatoria que muestra el dispositivo y es posible cambiarla.
+Las direcciones MAC aleatorias se dividen en dos categorías:
 
-Dentro del grupo de _MACs Aleatorias_ tenemos dos subgrupos: las que permiten la conexión al dispositivo y las que no lo permiten.
+* Resolvibles: Permiten derivar la dirección MAC pública mediante una clave de resolución de identidad (IRK), si está disponible.
+* No resolvibles: Totalmente aleatorias y no pueden vincularse con la dirección MAC pública del dispositivo.
 
-Las _MAC Aleatorias_ que si permiten la conexión y acceso a un conjunto de _Servicios_ Bluetooth obligatoriamente no tienen que resolver la conexión contra la _MAC Pública_. Aunque es posible calcular la _MAC Pública_ a partir de una _MAC Aleatoria_.
+Usar direcciones MAC aleatorias durante el descubrimiento del dispositivo es esencial para mitigar el rastreo y prevenir ataques de suplantación de identidad.
 
-La generación de _MACs Aleatorias_ durante el descubrimiento de los dispositivos es fundamental para prevenir ataques como `BlueTrust`.
-
-__Nota__: Existe una similitud entre la _MAC real_ en Wi-Fi y la _MAC Pública_ en Bluetooth, al igual que entre la _MAC aleatoria_ en Wi-Fi y la _MAC Aleatoria_ en Bluetooth.
+Además, aunque un dispositivo afirme utilizar direcciones MAC aleatorias, es importante verificar que realmente cambien con el tiempo, ya que una MAC “aleatoria” estática o con rotación poco frecuente no proporciona una protección de privacidad significativa
 
 ## Descripción del proceso
 

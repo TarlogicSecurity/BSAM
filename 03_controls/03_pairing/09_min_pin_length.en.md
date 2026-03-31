@@ -14,10 +14,9 @@ tags:
 - BLE
 ---
 
+In a pairing process using a Passkey (or PIN), the device prompts the user, or automatically generates, a numeric code that must be entered on both devices. Besides confirming that both devices belong to the same user, this PIN is used to generate the link key for authenticating future connections. Therefore, its length must be sufficient to resist brute force attacks.
 
-In a pairing process with Passkey (or PIN number) the device prompts the user or automatically generates a PIN number that must be entered at both paired ends. In addition to authenticating that both devices belong to the same user, the PIN number is used to generate the link key that will authenticate the devices in future connections, so the length must be adequate to avoid brute force attacks.
-
-PIN numbers shorter than 8 digits in BR/EDR or 6 digits in BLE are not recommended due to their weakness against brute force attacks, so whether the device requests the PIN from the user or generates it automatically, the device must verify that the length is not shorter than 8 digits in BR/EDR and equal 6 digits in BLE.
+PIN values shorter than 8 digits in BR/EDR or 6 digits in BLE are not recommended due to their low entropy. Whether the PIN is user entered or device generated, the device must ensure that it meets these minimum length requirements.
 
 
 ## Description

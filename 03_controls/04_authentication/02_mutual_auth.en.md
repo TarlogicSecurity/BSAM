@@ -13,11 +13,12 @@ tags:
 - BR/EDR
 ---
 
-During the Bluetooth authentication process, it is not necessary for the two devices involved to check each other's identity, which can lead to spoofing attacks, where a malicious device can impersonate another device.
+During Bluetooth Classic authentication, the two devices do not necessarily verify each other’s identity, which can enable spoofing attacks in which a malicious device impersonates a legitimate one.
 
-The authentication process can be performed using the following methods:
- * `Legacy Authentication`: Performs authentication unilaterally, from master to slave, and may allow the master of a communication to be unauthenticated. It should be avoided as it allows spoofing attacks.
- * `Secure Authentication`: Requires authentication of both parties to the communication, preventing either party from being spoofed by a malicious device.
+Authentication can occur through two methods:
+
+* Secure Authentication: Requires mutual authentication between both devices, preventing impersonation by malicious actors.
+* Legacy Authentication: Authenticates only from central to peripheral, leaving the central unauthenticated and vulnerable to spoofing attacks. This method should be avoided.
 
 
 ## Description

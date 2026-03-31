@@ -14,9 +14,9 @@ tags:
 - BLE
 ---
 
-Uno de los métodos utilizados durante el emparejamiento para generar la clave compartida entre los dispositivos consiste en compartir un código PIN generado aleatoriamente por uno de los dispositivos. A partir de este número PIN, que el usuario debe introducir, se genera la clave de enlace, por lo que es fundamental evitar que el número generado sea predecible. En algunos casos, como las radios de los automóviles o en los Apple TV, el PIN puede ser un número fijo de 4 dígitos.
+Uno de los métodos de emparejamiento utilizados para generar la clave compartida requiere compartir un código PIN aleatorio, que el usuario debe introducir. Dado que la clave depende de este PIN, es esencial que no sea predecible.
 
-La aleatoriedad de las semillas utilizadas en los procedimientos criptográficos para generar claves de enlace en Bluetooth es de suma importancia. Cuando se emplea un parámetro fijo, como el código PIN, se disminuye la entropía de esta entrada, lo que conlleva a una reducción en el nivel de seguridad y, por ende, debilita la protección de las claves de enlace del dispositivo. Esto se debe a que las claves de enlace pueden ser potencialmente derivadas a partir de este código PIN fijo, lo que compromete la seguridad del sistema.
+La aleatoriedad de las semillas empleadas en procedimientos criptográficos es crítica para asegurar las claves Bluetooth. En algunos dispositivos, el PIN puede ser un número fijo de 4 dígitos. Cuando se emplean parámetros fijos como PIN estáticos, la entropía disminuye y se reduce la seguridad, comprometiendo la fortaleza de las claves derivadas.
 
 
 ## Descripción del proceso

@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
+The temporary encryption keys used in a Bluetooth connection can have different entropy levels. The number of entropy bytes is negotiated at the start of the encryption process and determines the strength of the temporary key.
 
-The temporary encryption keys of a Bluetooth connection can have different levels of entropy. To decide how secure a temporary encryption key for a Bluetooth connection is, the number of entropy bytes it will have is negotiated during the start of the encryption process.
-
-Small keys, below 7 bytes, can be discovered by brute force attacks, breaching the confidentiality of communications.
-
+Keys with fewer than 7 bytes of entropy can be recovered through brute force attacks, compromising the confidentiality of the communication.
 
 ## Description
 

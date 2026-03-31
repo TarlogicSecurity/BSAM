@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-Devices with Bluetooth capabilities require tools and applications that make use of these communications. If new functionalities are to be added or problems corrected, these devices must have an update mechanism.
+Devices with Bluetooth capabilities rely on application‑layer software that manages and consumes Bluetooth service resources. To add new functionality or correct issues, these devices require a software update mechanism.
 
-There is always a possibility that either bugs or security flaws will be found in a device's application software during thea device's lifespan. These applications can refer to applications on devices like smartphones, but they can also include applications that consume Bluetooth resources on not so powerful embedded systems, such as applications developed on open hardware and software platforms. The only mechanism that can be used to solve those bugs and security flaws is via software updates.
-
-For the above reasons, it is fundamental to include an application software update mechanism  that consumes Bluetooth controller resources on a device, otherwise if a problem is found, it will be impossible to fix it without recalling all the devices in use.
+Because bugs or security vulnerabilities may arise in this application‑layer software throughout the device’s lifespan, whether on powerful platforms such as smartphones or on more constrained embedded systems, software updates are the only viable method to address them. Therefore, it is essential that the application‑layer software running on the device can be updated, otherwise, resolving identified issues would be impossible without recalling all deployed units.
 
 
 ## Description

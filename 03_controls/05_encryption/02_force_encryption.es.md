@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-El uso de cifrado en las conexiones Bluetooth es opcional.
+Por defecto, el cifrado en conexiones Bluetooth es opcional. No obstante, el cifrado debe habilitarse siempre al acceder a servicios que expongan información sensible o que puedan permitir control no autorizado del dispositivo. Sin cifrado, los datos de la conexión son vulnerables a ataques de escucha, que podrían permitir la extracción de datos sin poseer la clave de enlace.
 
-El uso de mecanismos de cifrado es muy recomendable para el acceso a cualquier servicio que exponga información sensible o permita controlar el dispositivo de forma no autorizada.
-
-No utilizar cifrado expone los datos de una conexión a ataques de sniffing y permite el uso de ataques como BIAS para extraer datos del dispositivo sin compartir o conocer la clave de enlace.
+Para validar este control, los servicios sensibles se identifican según su funcionalidad y se intenta acceder a ellos sin poseer la clave de enlace. La verificación es satisfactoria si no se puede leer ningún dato ni acceder a funciones o controles del dispositivo.
 
 ## Descripción del proceso
 

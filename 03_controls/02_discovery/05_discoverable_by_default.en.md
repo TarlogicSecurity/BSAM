@@ -14,12 +14,11 @@ tags:
 - BLE
 ---
 
-Bluetooth devices have the ability to be discoverable at all times, either because they actively advertise themselves by sending _advertising_ packets or because they respond to _inquiry_ type queries by indicating that they are available. This is for the convenience of the user, so that the devices automatically connect when they are nearby. 
-It is a good practice that this discovery is not active by default and that it is only active on user demand, so that the user can activate and deactivate this state to avoid being detected and identified when it is not necessary, even penalizing the usability and user experience.
+Bluetooth devices can remain discoverable by continuously advertising themselves or responding to inquiry requests, facilitating automatic connections for user convenience. However, discoverability should not be enabled by default, it should only be activated when explicitly required. Allowing users to manually control this state helps prevent unnecessary detection and identification, even if it affects usability.
 
-Discoverable devices by default allow the extraction of some of the information needed to be impersonated (MAC, Name, Supported Bluetooth Version...), as well as other relevant information. It is recommended to keep them non-discoverable as long as it is not necessary for pairing or connection.
+Devices that remain discoverable expose information such as the MAC address, device name, and supported Bluetooth version, which can be used for tracking, impersonation or other targeted attacks. Therefore, discoverability should remain disabled except when needed for pairing or connection.
 
-Devices with input controls, such as buttons and keyboards, or similar items, should allow to change the discoverability status via these controls.
+Devices equipped with input controls (e.g., buttons or keyboards) should provide a means to enable or disable discoverability through these controls.
 
 
 ## Description

@@ -14,7 +14,11 @@ tags:
 - BLE
 ---
 
-Durante una conexión Bluetooth los dispositivos se encargan de mantener la conexión abierta de manera que pueden seguir intercambiando mensajes, estos mensajes tienen un tiempo máximo de respuesta por parte del dispositivo remoto.
+Durante una conexión Bluetooth, los dispositivos son responsables de mantener el enlace para que la comunicación continúe sin interrupciones. Cada dispositivo debe responder a los mensajes recibidos dentro del tiempo máximo esperado por su par, garantizando una conexión estable y resistente a condiciones de denegación de servicio (DoS).
+
+Para verificar el comportamiento correcto, se considera un escenario con múltiples dispositivos. Supóngase que los dispositivos A y B están conectados legítimamente. El sistema debe garantizar que cualquier otro dispositivo en el rango, por ejemplo C, no pueda forzar la desconexión de B. En este tipo de ataque, C suplanta a B, inicia un intento de conexión con A y envía inmediatamente un mensaje de desconexión para intentar terminar el enlace legítimo.
+
+Para que la verificación sea satisfactoria, A debe rechazar este intento de suplantación. El mensaje de desconexión solo debe afectar al propio intento de conexión de C y no provocar la caída del enlace legítimo entre A y B.
 
 ## Desconexión BR/EDR
 Si se supera el tiempo de espera la conexión se cierra automáticamente. Para el cierre de una conexión por parte de uno de los dispositivos, cualquiera de ellos puede enviar un mensaje _LMP_detach_ con el motivo de la desconexión.

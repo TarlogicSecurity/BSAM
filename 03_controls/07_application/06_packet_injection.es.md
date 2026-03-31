@@ -14,12 +14,9 @@ tags:
 - BLE
 ---
 
-Un ataque de inyección de paquetes consiste en el envío deliberado de paquetes de datos alterados o fabricados con el objetivo de manipular o perturbar las operaciones normales de sus dispositivos conectados. Esto es posible cuando no hay ningún tipo de comprobación de que el paquete tiene un formato correcto o es enviado por un dispositivo legítimo.
+Un ataque de inyección de paquetes consiste en enviar deliberadamente paquetes alterados o manipulados para afectar el funcionamiento normal del dispositivo. Esto es posible si no hay mecanismos que verifiquen que un paquete está bien formado o proviene de una fuente legítima.
 
-Si una aplicación requiere métodos de seguridad personalizados y decide utilizar la criptografía para un servicio en particular, los métodos de seguridad a nivel de la capa de aplicación deben ser adecuados para prevenir ataques de suplantación e inyección de paquetes.
-
-No cumplir con este control puede significar que, a pesar de los esfuerzos por utilizar medidas de seguridad a nivel de aplicación, estos puedan eludirse.
-
+Si una aplicación implementa seguridad personalizada mediante criptografía, dichos controles deben impedir la falsificación y la inyección de paquetes.
 
 ## Descripción del proceso
 

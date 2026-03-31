@@ -14,13 +14,9 @@ tags:
 - BLE
 ---
 
+By default, encryption in Bluetooth connections is optional. However, encryption should always be enabled when accessing services that expose sensitive information or that could allow unauthorized control of the device. Without encryption, connection data is vulnerable to sniffing attacks, which may allow data extraction without knowledge of the link key.
 
-The use of encryption in Bluetooth connections is optional.
-
-The use of encryption mechanisms is highly recommended for access to any service that exposes sensitive information or allows unauthorized control of the device.
-
-Not using encryption exposes the data on a connection to sniffing attacks and allows the use of attacks such as BIAS to extract data from the device without sharing or knowing the link key.
-
+To validate this control, sensitive services are identified according to their functionality, and attempts are made to access them without having the link key. The check is considered successful if no data can be read, and no functions or device controls are accessible.
 
 ## Description
 

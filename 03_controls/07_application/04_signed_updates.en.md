@@ -14,11 +14,7 @@ tags:
 - BLE
 ---
 
-
-For each of the available update mechanisms in a device, a check to verify if updates are digitally signed is needed.
-
-If a device uses and accepts non-signed updates or software, then, it is possible to craft custom software pieces, firmwares and applications that may access data or perform malicious actions by using the device in ways non-intended by the manufacturer and user.
-
+For each update mechanism available on a device, it is necessary to verify that the updates are digitally signed. If a device accepts unsigned firmware or software, an attacker could create custom components capable of accessing data or performing malicious actions, using the device in ways not intended by the manufacturer or the user.
 
 ## Description
 

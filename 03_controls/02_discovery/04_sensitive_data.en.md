@@ -15,11 +15,9 @@ tags:
 ---
 
 
-Inside the _advertising_ packets in BLE and some extended _inquiry_ responses in BR/EDR may contain additional data added by the manufacturer.
+Bluetooth Low Energy advertising packets and certain BR/EDR extended inquiry responses may include Manufacturer Specific Data, which can expose sensitive information and therefore must be carefully inspected.
 
-Some of the discovery messages contain _Manufacturer Specific Data_ that may contain sensitive information and should be analyzed carefully.
-
-This data should be analyzed for sensitive information and verify that unnecessary data is not being exposed.
+This analysis should verify that no unnecessary or sensitive data is being broadcast, as such exposure can facilitate the correlation of messages with specific devices and users, increasing the risk of targeted attacks and tracking.
 
 ## Description
 

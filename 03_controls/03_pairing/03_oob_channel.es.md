@@ -14,13 +14,9 @@ tags:
 - BLE
 ---
 
-En Bluetooth es necesario establecer una clave de enlace compartida entre dos dispositivos para autenticarlos entre sí posteriormente o cifrar las comunicaciones. El procedimiento de emparejamiento "presenta" a ambos dispositivos entre sí y establece la clave compartida mediante diferentes métodos. Algunos dispositivos Bluetooth utilizan métodos de emparejamiento utilizando datos fuera de banda (OOB Data), que son datos intercambiados a través de otras tecnologías, como NFC o WiFi.
+En Bluetooth, es necesario establecer una clave compartida entre dos dispositivos para autenticarlos y cifrar las comunicaciones. El emparejamiento presenta ambos dispositivos entre sí y genera esta clave mediante distintos métodos. Algunos dispositivos emplean datos fuera de banda (OOB), intercambiados mediante tecnologías externas como NFC o Wi‑Fi.
 
-A través de un mecanismo OOB se intercambian datos identificativos de cada dispositivo, necesarios para el proceso de autenticación durante el emparejamiento. Es un proceso equivalente al intercambio manual de números PIN.
-
-Una vez se han intercambiado los datos identificativos, se asume que el emparejamiento está protegido ante _MitM_ y que ambos dispositivos son conocidos por el usuario. Sin embargo, un mecanismo de comunicación OOB inseguro puede llevar a un atacante a capturar el tráfico y comprometer el emparejamiento. Un método de comunicación OOB adecuado debe tener protección ante _sniffing_.
-
-El método de comprobación de este control depende del mecanismo OOB utilizado.
+A través de un mecanismo OOB, cada dispositivo intercambia los datos de identificación necesarios para la autenticación, funcionando de forma similar a un intercambio manual de PIN. Una vez que estos datos se intercambian, el emparejamiento se considera protegido contra ataques MitM, siempre que el canal OOB sea seguro. No obstante, si el método OOB no está adecuadamente protegido frente a escuchas, un atacante podría capturar los datos intercambiados y comprometer el emparejamiento. El método de verificación para este control depende del mecanismo OOB específico utilizado.
 
 
 ## Descripción

@@ -14,18 +14,11 @@ tags:
 - BLE
 ---
 
+Al comenzar el emparejamiento, ambos dispositivos intercambian la información necesaria para establecer una clave compartida que asegure futuras conexiones. Entre los datos intercambiados se encuentran las capacidades de entrada y salida (IO capabilities), que indican si un dispositivo puede mostrar información en pantalla, aceptar pulsaciones simples o permitir al usuario introducir un código mediante un teclado. Estas capacidades ayudan a determinar el método de autenticación más seguro y adecuado, según lo que cada dispositivo puede hacer.
 
-Al inicio de un emparejamiento Bluetooth, ambos dispositivos intercambian información necesaria para establecer una clave compartida e iniciar futuras conexiones de manera segura. Entre los datos intercambiados se encuentran las capacidades de entrada y salida, o _IO Capabilities_, que especifican las capacidades de comunicación del dispositivo: Si tiene capacidad para mostrar información, para recibir entrada binaria (sí o no) o por teclado.
+Los dispositivos con mayores capacidades de entrada y salida deben utilizarlas para habilitar modos de emparejamiento más seguros, ya que parte de la seguridad se basa en la verificación por parte del usuario para confirmar que los dispositivos que se emparejan son efectivamente los previstos. Esta verificación, normalmente mediante confirmación de PIN, protege contra ataques MitM.
 
-Las _IO Capabilities_ (capacidades de entrada y salida) proporcionadas por un dispositivo están relacionadas con los métodos de emparejamiento permitidos por el dispositivo, de modo que los dispositivos con mayores capacidades de entrada y salida deben hacer uso de ellas para permitir modos de emparejamiento más seguros. 
-
-Esto es porque parte de la seguridad durante el emparejamiento depende de la interacción del usuario, que debe verificar que ambos dispositivos emparejados son los que se pretenden emparejar, y no un dispositivo malicioso cercano. Esta protección ante ataques MitM durante el emparejamiento se realiza habitualmente haciendo que el usuario verifique un pin en ambos dispositivos.
-
-Unas capacidades de entrada y salida limitadas pueden dificultar o imposibilitar la aplicación de esta protección. Por ejemplo, un dispositivo sin ningún tipo de entrada o salida sólo puede emparejarse con otro dispositivo sin interacción del usuario. Sin embargo, un dispositivo con teclado y pantalla permite que el usuario introduzca un PIN compartido con el otro dispositivo durante el emparejamiento.
-
-Generalmente, todos los dispositivos tienen disponible algún método de entrada o salida que puedan utilizar para mejorar la seguridad del emparejamiento, por lo que deben declararse las mayores capacidades de entrada y salida posibles para el dispositivo. En cualquier caso, siempre debe evitarse declarar que el dispositivo no dispone de ninguna capacidad de entrada y salida, ya que, en este caso sólo es posible utilizar el método de emparejamiento "just works", que no permite la interacción del usuario y no ofrece protección MitM.
-
-Si el emparejamiento no es seguro, la clave compartida no es segura y todas las funciones de seguridad de Bluetooth se ven afectadas.
+Los dispositivos con capacidades IO limitadas no pueden realizar esta verificación y pueden quedar restringidos a métodos inseguros como “Just Works”, que no requiere interacción del usuario ni protege contra MitM. Por ello, los dispositivos deben declarar las capacidades IO más altas disponibles y evitar declarar ninguna.
 
 ## Descripción del proceso
 

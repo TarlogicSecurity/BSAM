@@ -14,15 +14,11 @@ tags:
 - BLE
 ---
 
-Bluetooth services have a number of permissions so that you can limit how you can interact with them, whether you need to authenticate first, whether you can read or write.
+Bluetooth services define the permissions that regulate how a device can interact with them, including whether authentication is required and whether read or write operations are allowed. For each exposed service, it is necessary to verify that access control has been correctly implemented.
 
-For each Bluetooth service exposed on a device, it is necessary to verify if access control has been implemented correctly.
+Because the Bluetooth standard prioritizes interoperability, some services, such as those defined under the GATT profile, may allow access without authentication. In addition, depending on the Feature Exchange during connection setup, a device may require encryption to access certain services. However, not all encryption levels provide the same degree of protection. Some services may require raising the encryption level (e.g., transitioning from Phase 2 to Phase 3 of pairing) before access is granted.
 
-This is because the standard is focused on interoperability, and there are services in which interoperability takes precedence and should allow access without authentication, as can be the case with the GATT profile service.
-
-A device, due to the exchange of features (_Feature Exchange_), may have required encryption to establish the connection and access the GATT profile. However, since there are various types of encryption, it is possible that it may not provide a sufficient level of security to access a _Service_ that requires higher protection. Similarly, it may happen that, to access certain functionalities exposed in a _Service_ from the general attribute profile, it may be necessary to even raise the encryption level, moving from _Phase 2_ to _Phase 3_ of pairing in order to access said _Service_.
-
-Therefore, it is important to verify the encryption configured for each security level implemented on the device.
+Therefore, it is essential to verify that each service is protected according to its security requirements and that the configured encryption level is appropriate for the sensitivity of the functionality it exposes.
 
 ## Description
 

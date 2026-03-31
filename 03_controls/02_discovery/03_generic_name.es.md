@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-Los dispositivos Bluetooth pueden enviar de manera pública, y sin necesidad de autenticación o autorización, su nombre y otros datos relacionados.
+Los dispositivos Bluetooth pueden difundir públicamente su nombre y datos relacionados sin requerir autenticación o autorización. Este nombre puede revelar información sobre el tipo de dispositivo, el usuario o incluso incluir identificadores como la dirección MAC o un ID único. Para reducir la exposición innecesaria, los dispositivos deben utilizar un nombre genérico que divulgue solo la información mínima necesaria.
 
-El nombre Bluetooth de un dispositivo puede dar información sobre el tipo de dispositivo, su usuario, incluir la propia MAC o un ID único. Es recomendable que el dispositivo tenga un nombre genérico y desvele la mínima información necesaria.
-
-El conocer a quien pertenece un dispositivo Bluetooth permite ataques dirigidos y deriva en un problema de privacidad al poder identificar un dispositivo de manera univoca en un momento y lugar concreto.
+Revelar detalles identificables permite la correlación con un dispositivo o usuario específico, facilitando ataques dirigidos y generando riesgos de privacidad al permitir que el dispositivo sea identificado y rastreado en un momento y ubicación concretos.
 
 ## Descripción del proceso
 

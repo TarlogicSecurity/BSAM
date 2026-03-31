@@ -14,11 +14,9 @@ tags:
 - BLE
 ---
 
-El estándar de bluetooth evoluciona y cada cierto tiempo aparece una nueva versión disponible por lo que los dispositivos puede contar con mecanismos de actualización de este estándar de bluetooth por una pila de bluetooth con nuevas capacidades y que arregle problemas de seguridad.
+El estándar Bluetooth evoluciona con el tiempo, introduciendo nuevas versiones con capacidades ampliadas y mejoras de seguridad. Por ello, los dispositivos deben incluir mecanismos para actualizar la pila Bluetooth, que forma parte del firmware del dispositivo.
 
-Durante la vida útil de un dispositivo que utiliza tecnología Bluetooth es posible que se encuentren errores o vulnerabilidades de seguridad en la pila Bluetooth. El único mecanismo que se puede utilizar para solucionar estas vulnerabilidas de seguridad es mediante actualizaciones de pila de Bluetooth (una parte del firmware del dispositivo).
-
-Por las razones mencionadas anteriormente es fundamental incluir un mecanismo de actualización de la pila de Bluetooth o del firmware que incluye esta en un dispositivo. De lo contrario, si se encuentra un problema, será inviable solucionarlo sin tener que retirar todos los dispositivos en uso.
+Pueden surgir vulnerabilidades en la pila durante la vida útil del dispositivo y las actualizaciones software son la forma de corregirlas. Sin un mecanismo de actualización, cualquier problema identificado requeriría la retirada de todos los dispositivos.
 
 ## Descripción del proceso
 

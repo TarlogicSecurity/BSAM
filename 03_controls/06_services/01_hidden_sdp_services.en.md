@@ -14,14 +14,13 @@ tags:
 - BLE
 ---
 
-In Bluetooth, a service refers to a specific functionality or feature that a device offers to other devices within a Bluetooth network. Each service is identified by a Universally Unique Identifier (UUID), and can be discovered and used by other Bluetooth devices that support that particular service.
+In Bluetooth, a service represents a specific functionality offered by a device, identified by a Universally Unique Identifier (UUID). Services can be discovered and used by other Bluetooth devices that support them.
 
-In Bluetooth there are multiple ways to discover available services in a device. One of the mechanisms to perform this discovery is the _Service Discovery Protocol_ or _SDP_ and its purpose is to discover services on a remote device, obtain information about the services and their characteristics, and establish how to connect to them.
+Bluetooth provides multiple mechanisms to discover available services, one of which is the Service Discovery Protocol (SDP). SDP enables the identification of remote services, retrieval of their characteristics, and the determination of how to connect to them.
 
-If _SDP_ is present, it is important that it is correcly configured and that lists all the available services in the device. Failing to list a service in the _SDP_ does not prevent users from accesing it and does not secure it.
+To identify hidden or undocumented services, an SDP discovery must be performed using standard Bluetooth tools. After obtaining the list of services advertised via SDP, additional service discovery techniques should be applied to verify that all detected services match those advertised. The presence of a service not listed in SDP indicates a hidden service but does not secure it, as access remains possible.
 
-On the same topic, if a service is correctly secured, there is no need to hide it and correctly configuring _SDP_ to list it will be in conformance with Bluetooth Specifications, allowing for better device interoperability.
-
+If a service is properly secured, hiding it is unnecessary. Maintaining accurate SDP listings improves device interoperability and aligns with Bluetooth specifications.
 
 ## Description
 

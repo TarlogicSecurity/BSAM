@@ -14,9 +14,9 @@ tags:
 - BLE
 ---
 
-En el proceso de emparejamiento con Passkey (o número PIN) el dispositivo solicita al usuario o genera automáticamente un número PIN que debe introducirse en ambos extremos emparejados. Además de autenticar que ambos dispositivos pertenecen al mismo usuario, el número PIN se utiliza para generar la clave de enlace que autenticará a los dispositivos en futuras conexiones, por lo que la longitud debe ser adecuada para evitar ataques de fuerza bruta.
+En procesos de emparejamiento mediante Passkey (PIN), el dispositivo muestra o genera un código numérico que debe introducirse en ambos dispositivos. Además de confirmar que ambos dispositivos pertenecen al mismo usuario, este PIN se emplea para generar la clave compartida. Por ello, su longitud debe ser suficiente para resistir ataques de fuerza bruta.
 
-Los números PIN de menos de 8 dígitos en BR/EDR o 6 dígitos en BLE no son recomendables por su debilidad ante ataques de fuerza bruta, por lo que, tanto si el dispositivo solicita el PIN al usuario como si lo genera automáticamente, el dispositivo debe verificar que la longitud no es inferior a 8 dígitos en BR/EDR e igual a 6 dígitos en BLE.
+Los PIN de menos de 8 dígitos en BR/EDR o 6 en BLE no se recomiendan por su baja entropía. Ya sea introducido por el usuario o generado por el dispositivo, debe cumplir estos requisitos mínimos.
 
 
 ## Descripción del proceso

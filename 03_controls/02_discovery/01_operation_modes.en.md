@@ -15,9 +15,7 @@ tags:
 ---
 
 
-Bluetooth has multiple transport/operation modes and a device can support one or more at the same time. Among the most common are BR/EDR (also known as Bluetooth Classic) and Bluetooth Low Energy (BLE), less common AMP.
-
-Enabling unnecessary operation modes increases the attack surface of the device. Limiting the exposed capabilities to the minimum necessary is a good security practice, so it is advisable to check that the possible modes of operation on the device match the required ones.
+Bluetooth supports multiple transport and operation modes, and a device may implement one or several simultaneously (e.g., BR/EDR, BLE, or both). Enabling operation modes that are not required increases the device’s attack surface. Therefore, limiting exposed capabilities to the minimum necessary is a good security practice. It is advisable to verify that the operation modes enabled on the device correspond only to those strictly required.
 
 
 ## Description

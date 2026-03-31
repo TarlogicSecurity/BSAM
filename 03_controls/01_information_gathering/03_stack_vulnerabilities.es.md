@@ -15,9 +15,9 @@ tags:
 ---
 
 
-Los protocolos de las capas altas del estándar están implementados en la pila del host (BlueZ, drivers de Bluetooth en Windows…). Si se han introducido vulnerabilidades en esta pila, es posible que las vulnerabilidades afecten al dispositivo al completo, por lo que pueden ser críticas para su seguridad.
+Identificar si el dispositivo está afectado por vulnerabilidades conocidas es un paso fundamental en una auditoría de seguridad.
 
-Al igual que con las vulnerabilidades en el controlador, se ha de verificar qué vulnerabilidades de pila afectan al dispositivo analizado.
+Los protocolos de capa superior del estándar Bluetooth se implementan en la pila del host (por ejemplo, BlueZ o los controladores Bluetooth de Windows). Las vulnerabilidades introducidas en esta pila pueden afectar al dispositivo y, por lo tanto, representan un riesgo crítico de seguridad. Al igual que con las vulnerabilidades a nivel de controlador, es necesario confirmar qué vulnerabilidades de la pila del host aplican al dispositivo analizado.
 
 ## Descripción del proceso
 

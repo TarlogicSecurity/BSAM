@@ -15,12 +15,9 @@ tags:
 ---
 
 
-Dentro de los paquetes de _advertising_ en BLE, y en algunas respuestas extendidas de _inquiry_ en BR/EDR, pueden estar presentes datos adicionales incorporados por el fabricante.
+Los paquetes de publicidad de Bluetooth Low Energy y ciertas respuestas extendidas de consulta BR/EDR pueden incluir datos específicos del fabricante, los cuales pueden exponer información sensible y, por lo tanto, deben inspeccionarse cuidadosamente.
 
-Algunos de los mensajes de descubrimiento contienen datos específicos del fabricante (_Manufacturer Specific Data_) que pueden contener información sensible y deben ser analizados con detenimiento.
-
-Estos datos deben analizarse en busca de información sensible y verificar que no se están exponiendo datos innecesarios.
-
+Este análisis debe verificar que no se estén transmitiendo datos innecesarios o sensibles, ya que dicha exposición puede facilitar la correlación de mensajes con dispositivos y usuarios específicos, incrementando el riesgo de ataques dirigidos y rastreo.
 
 ## Descripción del proceso
 

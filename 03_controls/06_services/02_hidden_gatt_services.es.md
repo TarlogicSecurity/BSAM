@@ -14,13 +14,9 @@ tags:
 - BLE
 ---
 
-En Bluetooth, un servicio se refiere a una funcionalidad o característica específica que un dispositivo ofrece a otros dispositivos dentro de una red Bluetooth. Cada servicio se identifica por un Identificador Único Universal (UUID), y puede ser descubierto y utilizado por otros dispositivos Bluetooth que soportan ese servicio en particular.
+En Bluetooth existen varios mecanismos para descubrir los servicios disponibles en un dispositivo. Uno de ellos es el perfil (GATT), que permite la comunicación mediante atributos estructurados. GATT es obligatorio en dispositivos compatibles con BLE y debe configurarse correctamente para listar todos los servicios disponibles.
 
-En Bluetooth existen múltiples formas de descubrir los servicios disponibles en un dispositivo. Uno de los mecanismos para realizar este descubrimiento es el _Perfil de Atributos Genéricos_ o _GATT_ y permite la comunicación entre dispositivos mediante el intercambio de atributos (datos organizados en un formato específico).
-
-Es obligatorio que _GATT_ esté presente, es importante que se configure correctamente y que liste todos los servicios disponibles en el dispositivo. No listar un servicio en _GATT_ no impide que los usuarios lo accedan y no lo asegura.
-
-De igual manera, si un servicio está correctamente asegurado, no es necesario ocultarlo y configurar _GATT_ correctamente para listarlo estará en conformidad con las Especificaciones de Bluetooth, lo que permitirá una mejor interoperabilidad entre dispositivos.
+No listar un servicio en GATT no impide el acceso ni proporciona beneficios de seguridad. Del mismo modo, si un servicio está adecuadamente protegido, ocultarlo no es necesario. Asegurar que GATT liste correctamente todos los servicios mejora la interoperabilidad y cumple con las especificaciones.
 
 ## Descripción del proceso
 

@@ -13,19 +13,16 @@ tags:
 - BR/EDR
 ---
 
-In a Bluetooth communication there are two defined roles: 
- * _Master_: Is the main role of a "piconet" (network of Bluetooth devices) and defines the physical parameters of the connections.
- * _Slave_: Device that simply follows the steps of the master.
+In Bluetooth Classic (BR/EDR), devices operate under two possible roles:
 
-After the initiation of a physical connection, the initiating device automatically becomes the master.
+* Central: Sets the physical parameters of the connection.
+* Peripheral: Follows the Central’s instructions.
 
-In this context, role switching is commonly used by devices that can only act as slaves to avoid being masters of the connection when they have been initiators of the connection.
+When a connection is initiated, the initiating device automatically assumes the Central role.
 
-However, this mechanism can be abused to avoid the authentication process by a device acting as master, since the _Legacy_ authentication process only requires the master device to authenticate the slave but not the other way around.
+Role switching from Central to Peripheral is sometimes used by devices that are designed to operate only as Peripherals. However, this mechanism can be exploited to bypass authentication, since in legacy authentication only the Central authenticates the Peripheral. Attacks such as BIAS take advantage of this behavior by forcing a role switch just before authentication, allowing an attacker to impersonate a previously paired device.
 
-For example, BIAS uses this capability for a slave device to become the master of the communication just before authentication, and thus avoid being authenticated by the other end. With this strategy, it can impersonate other devices against a victim with which the impersonated device was paired.
-
-It is preferable to avoid the use of the slave to master role change mechanism if it is not necessary for the normal operation of the device.
+To reduce this risk, the Peripheral to Central role change mechanism should be avoided unless it is strictly required for normal device operation.
 
 
 ## Description

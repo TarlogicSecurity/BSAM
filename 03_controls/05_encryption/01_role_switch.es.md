@@ -13,13 +13,14 @@ tags:
 - BR/EDR
 ---
 
-En una comunicación Bluetooth existen dos roles definidos: 
- * Maestro (_master_): Es el rol principal de una "piconet" (red de dispositivos Bluetooth) y define los parámetros físicos de las conexiones.
- * Esclavo (_slave_): Dispositivo que se limita a seguir los pasos del maestro. 
+En la comunicación Bluetooth existen dos roles definidos:
 
-El cambio de rol puede ser utilizado por dispositivos que sólo pueden actuar como esclavos para evitar ser maestros de la conexión. Este procedimiento de cambio de rol suele tener lugar durante el establecimiento de una conexión y siempre antes de la fase de autenticación.
+* Central: Define los parámetros físicos de la conexión dentro del piconet.
+* Periférico: Sigue los parámetros establecidos por el Central.
 
-Si este tiene lugar tras la fase de autenticación y antes de la fase de cifrado, puede ser utilizado para atacar la fase de cifrado y extraer la clave temporal usada durante una conexión, atacando la confidencialidad de los datos de esa conexión. Por ello, es preferible denegar el uso del mecanismo de cambio de rol tras el paso de autenticación mientras no sea necesario para el funcionamiento normal del dispositivo.
+El cambio de rol puede ser utilizado por dispositivos diseñados para operar solo como periféricos para evitar actuar como central. Este mecanismo normalmente ocurre durante el establecimiento de la conexión y siempre antes de la autenticación.
+
+Si ocurre un cambio de rol después de la autenticación y antes del cifrado, podría explotarse para atacar la fase de cifrado e intentar extraer la clave temporal usada durante la conexión, comprometiendo la confidencialidad. Por este motivo, los dispositivos no deben permitir cambios de rol tras la autenticación a menos que sean estrictamente necesarios.
 
 
 ## Descripción del proceso

@@ -14,10 +14,9 @@ tags:
 - BLE
 ---
 
+One of the pairing methods used to generate the shared key between devices involves sharing a randomly generated PIN code, which the user must enter. Since the link key is derived from this PIN, it is essential that the PIN is not predictable.
 
-One of the methods used during pairing to generate the shared key between devices involves sharing a randomly generated PIN code by one of the devices. From this PIN number, which the user must input, the link key is generated, making it crucial to prevent the generated number from being predictable. In some cases, such as car radios or Apple TVs, the PIN can be a fixed 4-digit number.
-
-The randomness of the seeds used in cryptographic procedures to generate Bluetooth link keys is of paramount importance. When a fixed parameter, such as the PIN code, is used, the entropy of this input is reduced, leading to a decrease in the level of security and, as a result, weakening the protection of the device's link keys. This is because link keys can potentially be derived from this fixed PIN code, compromising the system's security.
+The randomness of the seeds used in cryptographic procedures is critical for securing Bluetooth link keys. In some devices, the PIN may be a fixed 4 digit number. When fixed parameters like static PIN codes are used, the entropy of the input decreases, reducing the security level. As a result, link keys may be derived from this predictable value, compromising the overall security of the system.
 
 ## Description
 

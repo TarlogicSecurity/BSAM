@@ -15,11 +15,11 @@ tags:
 ---
 
 
-Un dispositivo Bluetooth que disponga de una potencia de señal que permita interacción a grandes distancias incrementa su grado de exposición. Por este motivo, es necesario mantener reducida la intensidad de señal de un dispositivo Bluetooth, cubriendo únicamente el área necesaria de acuerdo con su uso previsto.
+Un dispositivo Bluetooth con una potencia de señal suficiente para la interacción a larga distancia incrementa su exposición. Por esta razón, la potencia de señal debe limitarse para cubrir únicamente el área necesaria para su uso previsto.
 
-En esto también influye el entorno, las fuentes de ruido y la antena receptora: dependiendo de la relación señal/ruido (SNR) el dispositivo Bluetooth puede permitir conexiones a diferentes distancias.
+El rango efectivo de comunicación del dispositivo depende de las condiciones ambientales, fuentes de ruido y características de la antena, ya que estos factores afectan la relación señal-ruido (SNR) y, en consecuencia, la distancia a la que es posible establecer conexiones.
 
-Para comprobar el área de conexión de la señal, por tanto, será necesario anotar las características del equipo y el entorno en el que se realizan las mediciones, para que conste en la evaluación del resultado y poder ser comparado con otras mediciones.
+Para garantizar evaluaciones fiables, el equipo utilizado y las condiciones ambientales durante la medición deben documentarse para permitir comparaciones consistentes con pruebas futuras.
 
 ## Descripción del proceso
 

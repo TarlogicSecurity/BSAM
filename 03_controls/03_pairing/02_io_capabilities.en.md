@@ -14,18 +14,11 @@ tags:
 - BLE
 ---
 
+At the start of pairing, both devices exchange the information required to establish a shared key for secure future connections. Among the exchanged data are the input and output capabilities (IO capabilities), which indicate whether a device can show information on a screen, accept simple button presses, or allow the user to enter a code through a keypad. These capabilities help determine the safest and most suitable authentication method for the pairing process, depending on what each device can actually do.
 
-At the start of a pairing, both devices exchange information necessary to establish a shared key and securely initiate future connections. Among the data exchanged are the input and output capabilities, or _IO Capabilities_, which specify the communication capabilities of the device: whether it can display information, to receive binary input (yes or no) or by keyboard.
+Devices with greater input and output capabilities should use them to enable more secure pairing modes, since part of the security relies on user interaction to verify that the devices being paired are the intended ones. This verification, commonly through PIN confirmation, provides protection against MitM attacks.
 
-The _IO Capabilities_ (input and output capabilities) provided by a device are related to the pairing methods allowed by the device, so devices with higher input and output capabilities should make use of them to enable more secure pairing modes. 
-
-This is because part of the security during pairing depends on user interaction, which must verify that both paired devices are the ones intended to be paired, and not a nearby malicious device. This protection against MitM attacks during pairing is usually done by having the user verify a pin on both devices.
-
-Limited input and output capabilities may make it difficult or impossible to apply this protection. For example, a device without any input or output can only pair with another device without any user interaction. However, a device with a keypad and a display allows the user to enter a PIN shared with the other device during pairing.
-
-Generally, all devices have some input or output method available that they can use to enhance the security of the pairing, so the highest possible input and output capabilities should be declared for the device. In any case, declaring that the device does not have any input and output capabilities should always be avoided, since, in that case it is only possible to use the "just works" pairing method, which does not allow user interaction and does not provide MitM protection.
-
-If the pairing is not secure, the shared key is not secure, and all Bluetooth security features are affected.
+Devices with limited IO capabilities cannot perform this verification and may be restricted to insecure methods such as “Just Works”, which does not require user interaction nor protects against MitM attacks. Therefore, devices should declare the highest IO capabilities available and avoid declaring none.
 
 
 ## Description

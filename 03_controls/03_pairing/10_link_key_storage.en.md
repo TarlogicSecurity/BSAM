@@ -14,11 +14,11 @@ tags:
 - BLE
 ---
 
-The pairing process concludes with the establishment of a link key between the devices that both must keep authenticating and encrypt future connections.
+The pairing process concludes with the establishment of a link key that both devices must retain to authenticate and encrypt future connections. Because this key safeguards the confidentiality of Bluetooth communications, its storage must be secure.
 
-The storage of these link keys can be critical to maintain confidentiality in Bluetooth connections, so their storage must be secure. On Linux systems, it is common for them to be stored in clear files protected by access permissions. this protection may not be sufficient on a device without encrypted storage: an attacker can access the stored data, extract the keys, and use them if they are valid to communicate with the other end.
+On Linux systems, link keys are often stored in plaintext files protected only by filesystem permissions. On devices without encrypted storage, this protection may be insufficient, as an attacker with access to the filesystem could extract the keys and use them to communicate with the paired device.
 
-In small devices or devices with proprietary implementations (Bluetooth headsets and speakers, for example), this storage may be defined by the manufacturer and the confidentiality of the keys must be verified by reversing techniques or by accessing the device's firmware. 
+In small devices or those with proprietary implementations (e.g., Bluetooth headsets and speakers), storage mechanisms vary by manufacturer. In such cases, the confidentiality of stored keys must be verified through reverse engineering techniques or firmware analysis, ensuring not only that protection mechanisms exist but also that they provide a level of security appropriate to the device’s intended use.
 
 ## Description
 

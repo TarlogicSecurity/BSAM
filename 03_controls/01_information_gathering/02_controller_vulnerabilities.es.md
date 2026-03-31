@@ -15,9 +15,9 @@ tags:
 ---
 
 
-Las capas más bajas del estándar de Bluetooth están implementadas en el firmware del controlador, que es actualizado con menor frecuencia que el host y puede contener vulnerabilidades críticas.
+Identificar si el dispositivo está afectado por vulnerabilidades conocidas es un paso fundamental en cualquier auditoría de seguridad. Esta verificación es esencial para garantizar que la evaluación sea precisa y evitar falsos positivos.
 
-La identificación de vulnerabilidades conocidas es un paso fundamental en una auditoría de seguridad. Ha de verificarse si estas vulnerabilidades afectan al dispositivo analizado para evitar falsos positivos.
+Un punto de especial atención se encuentra en la implementación de las capas inferiores del estándar Bluetooth, que residen en el firmware del controlador. A diferencia de los componentes del lado del host, este firmware se actualiza con mucha menos frecuencia y, por tanto, puede mantener vulnerabilidades críticas sin parchear durante largos periodos. Como resultado, la evaluación del firmware del controlador es esencial para determinar la exposición real del dispositivo analizado.
 
 ## Descripción del proceso
 
