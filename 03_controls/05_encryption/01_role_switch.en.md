@@ -16,7 +16,7 @@ tags:
 In Bluetooth communication there are two defined roles:
 
 * Central: Defines the physical parameters of the connection within the piconet.
-* Peripheral: Follows the Central’s parameters.
+* Peripheral: Follows the Central's parameters.
 
 Role switching can be used by devices designed to operate only as peripherals to avoid being the central of a connection. This mechanism normally occurs during connection establishment and always before authentication.
 

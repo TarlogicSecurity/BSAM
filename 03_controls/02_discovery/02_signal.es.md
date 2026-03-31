@@ -14,7 +14,6 @@ tags:
 - BLE
 ---
 
-
 Un dispositivo Bluetooth con una potencia de señal suficiente para la interacción a larga distancia incrementa su exposición. Por esta razón, la potencia de señal debe limitarse para cubrir únicamente el área necesaria para su uso previsto.
 
 El rango efectivo de comunicación del dispositivo depende de las condiciones ambientales, fuentes de ruido y características de la antena, ya que estos factores afectan la relación señal-ruido (SNR) y, en consecuencia, la distancia a la que es posible establecer conexiones.

@@ -15,7 +15,7 @@ tags:
 ---
 
 
-Identifying whether the device is affected by known vulnerabilities is a fundamental step in any security audit. This verification is essential to ensure that the assessment is accurate and to avoid false positives.
+Identifying whether the device is affected by known vulnerabilities is a fundamental step in any security audit. Validation and verification of the found vulnerabilities is essential to ensure that the assessment is accurate and to avoid false positives.
 
 A particular point of attention lies in the implementation of the lower layers of the Bluetooth standard, which resides within the controller’s firmware. Unlike host side components, this firmware is updated significantly less frequently and may therefore retain unpatched, critical vulnerabilities over extended periods. As a result, the evaluation of the controller firmware is essential for determining the actual exposure of the analyzed device.
 

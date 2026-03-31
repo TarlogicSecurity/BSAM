@@ -18,7 +18,7 @@ During a Bluetooth connection, devices are responsible for maintaining the link 
 
 To verify correct behavior, consider a scenario where multiple devices are present. Suppose devices A and B are legitimately connected. The system must ensure that any other device in range, for example a device C, cannot force B to disconnect. In this type of attack, C impersonates B, initiates a new connection attempt with A, and immediately sends a disconnect message to try to terminate the legitimate connection.
 
-For the check to pass, A must reject this impersonation attempt. The disconnect message should affect only C’s own connection attempt and must not cause the legitimate link between A and B to drop.
+For the check to pass, A must reject this impersonation attempt. The disconnect message should affect only C's own connection attempt and must not cause the legitimate link between A and B to drop.
 
 ## BR/EDR disconnection
 If the timeout is exceeded the connection is automatically closed. For the closing of a connection by one of the devices, either device can send an _LMP_detach_ message with the reason for the disconnection.

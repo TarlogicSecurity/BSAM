@@ -18,7 +18,7 @@ The pairing process concludes with the establishment of a link key that both dev
 
 On Linux systems, link keys are often stored in plaintext files protected only by filesystem permissions. On devices without encrypted storage, this protection may be insufficient, as an attacker with access to the filesystem could extract the keys and use them to communicate with the paired device.
 
-In small devices or those with proprietary implementations (e.g., Bluetooth headsets and speakers), storage mechanisms vary by manufacturer. In such cases, the confidentiality of stored keys must be verified through reverse engineering techniques or firmware analysis, ensuring not only that protection mechanisms exist but also that they provide a level of security appropriate to the device’s intended use.
+In small devices or those with proprietary implementations (e.g., Bluetooth headsets and speakers), storage mechanisms vary by manufacturer. In such cases, the confidentiality of stored keys must be verified through reverse engineering techniques or firmware analysis, ensuring not only that protection mechanisms exist but also that they provide a level of security appropriate to the device's intended use.
 
 ## Description
 

@@ -14,7 +14,7 @@ tags:
 - BLE
 ---
 
-Bluetooth permite distintos métodos de emparejamiento. Uno de ellos es el emparejamiento heredado (legacy pairing), diseñado para dispositivos con capacidades computacionales limitadas. Debido a esas limitaciones, el emparejamiento heredado emplea algoritmos de generación de claves obsoletos e inseguros.
+Bluetooth permite distintos métodos de emparejamiento. Uno de ellos es el legacy pairing, diseñado para dispositivos con capacidades computacionales limitadas. Debido a esas limitaciones, el emparejamiento heredado emplea algoritmos de generación de claves obsoletos e inseguros.
 
 Durante la fase inicial del procedimiento de emparejamiento, los dispositivos intercambian sus capacidades mediante el proceso Pairing Feature Exchange. Este intercambio determina la derivación de la clave a largo plazo (LTK), que se utilizará posteriormente para establecer nuevas conexiones.
 

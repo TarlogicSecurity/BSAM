@@ -14,11 +14,11 @@ tags:
 - BLE
 ---
 
-After identifying the Bluetooth controller, it is essential to consult the manufacturer’s documentation to determine its current stage in the product life cycle.
+After identifying the Bluetooth controller, it is essential to consult the manufacturer's documentation to determine its current stage in the product life cycle.
 
 A Bluetooth controller that is approaching the end, or has already reached the end of its life cycle, may no longer receive updates from the manufacturer. As a result, any vulnerabilities discovered in its firmware or other components will remain permanently unpatched, as there will be no official method to fix them.
 
-Understanding the controller’s life cycle status is therefore crucial, as it helps determine whether the device will need to be replaced in the short, medium, or long term to maintain both operational stability and security.
+Understanding the controller's life cycle status is therefore crucial, as it helps determine whether the device will need to be replaced in the short, medium, or long term to maintain both operational stability and security.
 
 
 ## Description

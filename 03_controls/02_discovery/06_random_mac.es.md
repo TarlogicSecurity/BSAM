@@ -26,7 +26,7 @@ Las direcciones MAC aleatorias se dividen en dos categorías:
 
 Usar direcciones MAC aleatorias durante el descubrimiento del dispositivo es esencial para mitigar el rastreo y prevenir ataques de suplantación de identidad.
 
-Además, aunque un dispositivo afirme utilizar direcciones MAC aleatorias, es importante verificar que realmente cambien con el tiempo, ya que una MAC “aleatoria” estática o con rotación poco frecuente no proporciona una protección de privacidad significativa
+Además, aunque un dispositivo afirme utilizar direcciones MAC aleatorias, es importante verificar que realmente cambien con el tiempo, ya que una MAC "aleatoria" estática o con rotación poco frecuente no proporciona una protección de privacidad significativa
 
 ## Descripción del proceso
 

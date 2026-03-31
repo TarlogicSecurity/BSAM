@@ -13,7 +13,7 @@ tags:
 - BR/EDR
 ---
 
-During Bluetooth Classic authentication, the two devices do not necessarily verify each other’s identity, which can enable spoofing attacks in which a malicious device impersonates a legitimate one.
+During Bluetooth Classic authentication, the two devices do not necessarily verify each other's identity, which can enable spoofing attacks in which a malicious device impersonates a legitimate one.
 
 Authentication can occur through two methods:
 

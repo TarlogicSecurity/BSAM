@@ -16,7 +16,7 @@ tags:
 In Bluetooth Classic (BR/EDR), devices operate under two possible roles:
 
 * Central: Sets the physical parameters of the connection.
-* Peripheral: Follows the Central’s instructions.
+* Peripheral: Follows the Central's instructions.
 
 When a connection is initiated, the initiating device automatically assumes the Central role.
 

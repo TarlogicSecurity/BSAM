@@ -18,7 +18,7 @@ At the start of pairing, both devices exchange the information required to estab
 
 Devices with greater input and output capabilities should use them to enable more secure pairing modes, since part of the security relies on user interaction to verify that the devices being paired are the intended ones. This verification, commonly through PIN confirmation, provides protection against MitM attacks.
 
-Devices with limited IO capabilities cannot perform this verification and may be restricted to insecure methods such as “Just Works”, which does not require user interaction nor protects against MitM attacks. Therefore, devices should declare the highest IO capabilities available and avoid declaring none.
+Devices with limited IO capabilities cannot perform this verification and may be restricted to insecure methods such as "Just Works", which does not require user interaction nor protects against MitM attacks. Therefore, devices should declare the highest IO capabilities available and avoid declaring none.
 
 
 ## Description

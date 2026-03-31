@@ -22,11 +22,11 @@ In Bluetooth, two main types of MAC addresses are used:
 Random MAC addresses are divided into two categories:
 
 * Resolvable: Allow derivation of the Public MAC Address using an Identity Resolving Key (IRK), if available.
-* Non resolvable: Purely random and cannot be linked back to the device’s Public MAC Address.
+* Non resolvable: Purely random and cannot be linked back to the device's Public MAC Address.
 
 Using Random MAC Addresses during device discovery is essential to mitigate device tracking and prevent identity spoofing attacks.
 
-Also, although a device may claim to use random MAC addresses, it is important to verify that the address actually changes over time, as a static or rarely rotated “random” MAC fails to provide meaningful privacy protection.
+Also, although a device may claim to use random MAC addresses, it is important to verify that the address actually changes over time, as a static or rarely rotated "random" MAC fails to provide meaningful privacy protection.
 
 ## Description
 

@@ -15,7 +15,7 @@ tags:
 ---
 
 
-Bluetooth supports multiple transport and operation modes, and a device may implement one or several simultaneously (e.g., BR/EDR, BLE, or both). Enabling operation modes that are not required increases the device’s attack surface. Therefore, limiting exposed capabilities to the minimum necessary is a good security practice. It is advisable to verify that the operation modes enabled on the device correspond only to those strictly required.
+Bluetooth supports multiple transport and operation modes, and a device may implement one or several simultaneously (e.g., BR/EDR, BLE, or both). Enabling operation modes that are not required increases the device's attack surface. Therefore, limiting exposed capabilities to the minimum necessary is a good security practice. It is advisable to verify that the operation modes enabled on the device correspond only to those strictly required.
 
 
 ## Description

@@ -18,7 +18,7 @@ In Bluetooth, a shared link key must be established between two devices to encry
 
 Pairing essentially functions as a form of manual authentication, where the user confirms that the two devices attempting to connect are indeed the intended ones, whether by entering a PIN, comparing a displayed code, or explicitly accepting or rejecting a pairing request. When this user‑driven validation is absent or weak, the risk of connecting to an unauthorized device increases significantly.
 
-The Just Works method performs pairing without user interaction and does not provide any mechanism for the user to verify the identity of the remote device. This means that any nearby device can initiate pairing and establish a valid shared key without the user’s knowledge or approval. As a result, an attacker within range can still pair with the device and gain unauthorized access to device services.
+The Just Works method performs pairing without user interaction and does not provide any mechanism for the user to verify the identity of the remote device. This means that any nearby device can initiate pairing and establish a valid shared key without the user's knowledge or approval. As a result, an attacker within range can still pair with the device and gain unauthorized access to device services.
 
 
 ## Description

@@ -18,7 +18,7 @@ Al comenzar el emparejamiento, ambos dispositivos intercambian la información n
 
 Los dispositivos con mayores capacidades de entrada y salida deben utilizarlas para habilitar modos de emparejamiento más seguros, ya que parte de la seguridad se basa en la verificación por parte del usuario para confirmar que los dispositivos que se emparejan son efectivamente los previstos. Esta verificación, normalmente mediante confirmación de PIN, protege contra ataques MitM.
 
-Los dispositivos con capacidades IO limitadas no pueden realizar esta verificación y pueden quedar restringidos a métodos inseguros como “Just Works”, que no requiere interacción del usuario ni protege contra MitM. Por ello, los dispositivos deben declarar las capacidades IO más altas disponibles y evitar declarar ninguna.
+Los dispositivos con capacidades IO limitadas no pueden realizar esta verificación y pueden quedar restringidos a métodos inseguros como "Just Works", que no requiere interacción del usuario ni protege contra MitM. Por ello, los dispositivos deben declarar las capacidades IO más altas disponibles y evitar declarar ninguna.
 
 ## Descripción del proceso
 

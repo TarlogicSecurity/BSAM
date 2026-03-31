@@ -15,9 +15,9 @@ tags:
 ---
 
 
-A Bluetooth device with signal power sufficient for long distance interaction increases its exposure. For this reason, the device’s signal strength should be limited to cover only the area required for its intended use.
+A Bluetooth device with sufficient signal power for long distance interaction increases its exposure. For this reason, the device's signal strength should be limited to cover only the area required for its intended use.
 
-The device’s effective communication range depends on environmental conditions, noise sources, and antenna characteristics, as these factors affect the signal to noise ratio (SNR) and, consequently, the distance at which connections are possible.
+The device's effective communication range depends on environmental conditions, noise sources, and antenna characteristics, as these factors affect the signal to noise ratio (SNR) and, consequently, the distance at which connections are possible.
 
 To ensure reliable assessment, the equipment used and the environmental conditions during measurement must be documented for consistent evaluation and comparison with future tests.
 
