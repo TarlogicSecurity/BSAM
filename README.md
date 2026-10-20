@@ -2,6 +2,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.tarlogic.com%2Fbsam%2F&up_message=tarlogic.com%2Fbsam&label=Website)](https://www.tarlogic.com/bsam/)
+[![Build](https://github.com/TarlogicSecurity/BSAM/actions/workflows/build.yml/badge.svg)](https://github.com/TarlogicSecurity/BSAM/actions/workflows/build.yml)
 
 ![BSAM - Bluetooth security assessment methodology logo](https://www.tarlogic.com/bsam/assets/img/BSAM.png)
 
