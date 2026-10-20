@@ -1,11 +1,15 @@
-# BSAM - Bluetooth Security Assessment Methodology
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/img/BSAM%20logo%20dark.png">
+    <img alt="BSAM - Bluetooth Security Assessment Methodology" src="assets/img/BSAM%20logo%20light.png" width="400">
+  </picture>
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.tarlogic.com%2Fbsam%2F&up_message=tarlogic.com%2Fbsam&label=Website)](https://www.tarlogic.com/bsam/)
 [![Build](https://github.com/TarlogicSecurity/BSAM/actions/workflows/build.yml/badge.svg)](https://github.com/TarlogicSecurity/BSAM/actions/workflows/build.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/TarlogicSecurity/BSAM/badge)](https://scorecard.dev/viewer/?uri=github.com/TarlogicSecurity/BSAM)
 
-![BSAM - Bluetooth security assessment methodology logo](https://www.tarlogic.com/bsam/assets/img/BSAM.png)
+</div>
 
 Welcome to BSAM. BSAM is a **Bluetooth security** methodology that is open and collaborative, and it was developed by [Tarlogic](https://www.tarlogic.com/). It helps to standardize the security assessment of devices that use Bluetooth and Bluetooth LE technology through 36 security controls.
 
